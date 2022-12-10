@@ -1,0 +1,5 @@
+export { default as group } from './group.svg'
+export { default as earnings } from './earnings.svg'
+export { default as payments } from './payments.svg'
+export { default as reportedContent } from './reported-content.svg'
+export { default as settings } from './settings.svg'
