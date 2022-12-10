@@ -77,17 +77,17 @@ var arr = [
     subscribers: "455",
   },
 ];
-export default function BasicTable() {
+export default function UserData() {
   return (
     <TableContainer component={Paper} sx={{ backgroundColor: "#F5F5F5" }}>
       <Table sx={{ minWidth: 10 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Usernames</TableCell>
-            <TableCell align="right">Date joined</TableCell>
-            <TableCell align="right">Private Content </TableCell>
-            <TableCell align="right">Followers</TableCell>
-            <TableCell align="right">Subscribers</TableCell>
+            <TableCell align="center">Usernames</TableCell>
+            <TableCell align="center">Date joined</TableCell>
+            <TableCell align="center">Private Content </TableCell>
+            <TableCell align="center">Followers</TableCell>
+            <TableCell align="center">Subscribers</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -96,13 +96,14 @@ export default function BasicTable() {
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell scope="row">
-                <img src={row.profile} /> {row.email}
+              <TableCell align="center" scope="row">
+                <img src={row.profile} />
+                {row.email}
               </TableCell>
-              <TableCell align="right">{row.dateJoined}</TableCell>
-              <TableCell align="right">{row.content}</TableCell>
-              <TableCell align="right">{row.folowers}</TableCell>
-              <TableCell align="right">{row.subscribers}</TableCell>
+              <TableCell align="center">{row.dateJoined}</TableCell>
+              <TableCell align="center">{row.content}</TableCell>
+              <TableCell align="center">{row.folowers}</TableCell>
+              <TableCell align="center">{row.subscribers}</TableCell>
             </TableRow>
           ))}
         </TableBody>

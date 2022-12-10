@@ -1,11 +1,13 @@
 import "./App.css";
 // import SignIn from "./pages/sigIn";
-import AllUser from "./pages/allUser";
+// import AllUser from "./pages/allUser";
+import PaymentData from "./pages/paymentData";
 
 function App() {
   return (
     // <SignIn/>
-    <AllUser />
+    // <AllUser />
+    <PaymentData />
   );
 }
 
