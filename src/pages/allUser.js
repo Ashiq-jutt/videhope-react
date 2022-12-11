@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   FormControl,
+  Grid,
   InputLabel,
   MenuItem,
   Select,
@@ -13,11 +14,10 @@ export default function AllUser() {
   const [age, setAge] = React.useState("");
   return (
     <Container maxWidth="xl">
-      <Box sx={{ flexDirection: "row" }}>
+      <Grid justifyContent={'space-between'} alignItems={'center'} container>
         <h2>All users (344)</h2>
         <div>
-          <h6>All :(344)</h6>
-          <FormControl sx={{ width: 130 }}>
+          <FormControl sx={{ minWidth: '200px' }} size={'small'}>
             <InputLabel id="demo-simple-select-label">users</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -32,8 +32,7 @@ export default function AllUser() {
             </Select>
           </FormControl>
         </div>
-      </Box>
-      {/* table component */}
+      </Grid>
       <UserData />
     </Container>
   );

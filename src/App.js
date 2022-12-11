@@ -5,6 +5,9 @@ import SignIn from "./pages/sigIn";
 import AllUser from "./pages/allUser";
 import { Icon } from "@mui/material";
 import PaymentData from "./pages/paymentData";
+import Setting from './pages/setting';
+import Earnings from "./pages/earnings";
+import ReportContent from "./pages/report-content";
 const routes = [
   {
     type: "collapse",
@@ -28,7 +31,7 @@ const routes = [
     key: "earnings",
     icon: 'earnings',
     route: "/earnings",
-    component: <PaymentData />,
+    component: <Earnings />,
   },
   {
     type: "collapse",
@@ -36,15 +39,15 @@ const routes = [
     key: "reportedContent",
     icon: 'reportedContent',
     route: "/reportedContent",
-    component: <PaymentData />,
+    component: <ReportContent />,
   },
   {
     type: "collapse",
     name: "Settings",
     key: "settings",
     icon: 'settings',
-    route: "/reportedContent",
-    component: <PaymentData />,
+    route: "/settings",
+    component: <Setting />,
   },
 
 

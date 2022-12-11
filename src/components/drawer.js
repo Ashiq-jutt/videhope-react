@@ -16,10 +16,9 @@ import { styled, useTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import { Link, useNavigate, useNavigation } from 'react-router-dom';
-import { Icon } from '@mui/material';
-import logo from "../assets/logo.svg";
+import { Link } from 'react-router-dom';
 import * as SVG from '../assets';
+import logo from "../assets/logo.svg";
 
 const drawerWidth = 240;
 
