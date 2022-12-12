@@ -29,32 +29,9 @@ function UserProfile() {
 
       content: "$125.56",
     },
-    {
-      id: 1,
-      profile: profile,
-      email: "@jacob_w",
-      dateJoined: "12/02/22",
 
-      content: "$125.56",
-    },
     {
-      id: 1,
-      profile: profile,
-      email: "@jacob_w",
-      dateJoined: "12/02/22",
-
-      content: "$125.56",
-    },
-    {
-      id: 1,
-      profile: profile,
-      email: "@jacob_w",
-      dateJoined: "12/02/22",
-
-      content: "$125.56",
-    },
-    {
-      id: 1,
+      id: 6,
       profile: profile,
       email: "@jacob_w",
       dateJoined: "12/02/22",
@@ -197,13 +174,9 @@ function UserProfile() {
         </Typography>
 
         <Typography
-          sx={{
-            backgroundColor: "#F4F4F4",
-            padding: "15px",
-            borderWidth: "2px",
-            borderColor: "red",
-            justifyContent: "center",
-          }}
+          border={"2px solid grey"}
+          padding={"15px"}
+          borderRadius={"5px"}
         >
           Living it and killing it!!! 100%
         </Typography>
@@ -218,15 +191,7 @@ function UserProfile() {
         >
           Interests
         </Typography>
-        <Box
-          // borderWidth={"2px"}
-          // borderColor={"red"}
-          style={{
-            backgroundColor: "#F4F4F4",
-            padding: "15px",
-            // justifyContent: "center",
-          }}
-        >
+        <Box border={"2px solid grey"} padding={"15px"} borderRadius={"5px"}>
           <Button
             variant="outlined"
             sx={{

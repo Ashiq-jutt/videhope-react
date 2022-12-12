@@ -81,13 +81,13 @@ const getRoutes = (allRoutes) =>
   });
 function App() {
   return (
-    // <UserProfile />
-    <PersistentDrawerLeft routes={routes}>
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/allUsers" />} />
-      </Routes>
-    </PersistentDrawerLeft>
+    <UserProfile />
+    // <PersistentDrawerLeft routes={routes}>
+    //   <Routes>
+    //     {getRoutes(routes)}
+    //     <Route path="*" element={<Navigate to="/allUsers" />} />
+    //   </Routes>
+    // </PersistentDrawerLeft>
     // <PaymentData />
     // </>
   );
