@@ -54,12 +54,10 @@ const routes = [
     type: "collapse",
     name: "signout",
     key: "signout",
-    icon: 'logout',
+    icon: "logout",
     route: "/signout",
     component: <SignIn />,
   },
-
-
 ];
 const getRoutes = (allRoutes) =>
   allRoutes.map((route) => {
