@@ -6,3 +6,4 @@ export { default as settings } from './settings.svg'
 export { default as dollar } from './dollar.svg'
 export { default as arrowUp } from './arrow-up.svg'
 export { default as logout } from './logout.svg'
+export { default as left } from "./left.svg";
