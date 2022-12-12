@@ -49,6 +49,14 @@ const routes = [
     route: "/settings",
     component: <Setting />,
   },
+  {
+    type: "collapse",
+    name: "signout",
+    key: "signout",
+    icon: 'logout',
+    route: "/signout",
+    component: <SignIn />,
+  },
 
 
 ];

@@ -16,7 +16,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useMatch } from 'react-router-dom';
 import * as SVG from '../assets';
 import logo from "../assets/logo.svg";
 
@@ -70,7 +70,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft({ children, routes }) {
     const theme = useTheme();
     // const navigation = useNavigation();
+    // const match = useMatch();
+    // console.log('match=>>', match);
+    const loc = useLocation();
+    console.log('log=>>>', loc);
     const [open, setOpen] = React.useState(false);
+    const [route, setRoute] = React.useState('users');
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -108,6 +113,7 @@ export default function PersistentDrawerLeft({ children, routes }) {
                         width: drawerWidth,
                         boxSizing: 'border-box',
                         backgroundColor: '#0E1A2E',
+                        paddingX: '10px'
                     },
                 }}
                 variant="persistent"
@@ -121,32 +127,34 @@ export default function PersistentDrawerLeft({ children, routes }) {
                 </DrawerHeader>
                 <img src={logo} className={"logo"} />
                 <Divider />
-                <List>
+                <List style={{ flex: 1, }}>
                     {routes?.map(({ type, name, icon, title, noCollapse, key, href, route }, index) => {
                         const iconName = SVG[icon];
                         return (
-                            <ListItem key={index} disablePadding>
-                                <Link style={{ textDecoration: "none" }} to={route}>
-                                    <ListItemButton>
+                            <Link style={{ textDecoration: "none" }} to={route}>
+                                <ListItem key={index} disablePadding>
+                                    <ListItemButton style={{ width: '220px', borderRadius: '10px', backgroundColor: route === loc.pathname ? '#014BC3' : null }}>
                                         <ListItemIcon>
                                             <img src={iconName} />
                                         </ListItemIcon>
                                         <ListItemText sx={{ color: 'white' }} primary={name} />
                                     </ListItemButton>
-                                </Link>
-                            </ListItem>
+                                </ListItem>
+                            </Link>
                         )
                     })}
-                    <ListItem key={6} disablePadding>
+                    <Box position={'absolute'} bottom={'30px'} width={'100%'}>
                         <Link style={{ textDecoration: "none" }} to={'/earnings'}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <img src={SVG.group} />
-                                </ListItemIcon>
-                                <ListItemText sx={{ color: 'white' }} primary={'Sign out'} />
-                            </ListItemButton>
+                            <ListItem key={6} disablePadding>
+                                <ListItemButton style={{ width: '220px', }}>
+                                    <ListItemIcon>
+                                        <img src={SVG.logout} />
+                                    </ListItemIcon>
+                                    <ListItemText sx={{ color: 'white' }} primary={'Sign out'} />
+                                </ListItemButton>
+                            </ListItem>
                         </Link>
-                    </ListItem>
+                    </Box>
                 </List>
             </Drawer>
             <Main open={open}>
