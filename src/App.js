@@ -9,6 +9,7 @@ import Setting from "./pages/setting";
 import Earnings from "./pages/earnings";
 import ReportContent from "./pages/report-content";
 import ChangeName from "./pages/change-name";
+import UserProfile from "./pages/user-profile";
 const routes = [
   {
     type: "collapse",
@@ -80,15 +81,13 @@ const getRoutes = (allRoutes) =>
   });
 function App() {
   return (
-    // <ChangeName />
-    <>
-      <PersistentDrawerLeft routes={routes}>
-        <Routes>
-          {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/allUsers" />} />
-        </Routes>
-      </PersistentDrawerLeft>
-    </>
+    // <UserProfile />
+    <PersistentDrawerLeft routes={routes}>
+      <Routes>
+        {getRoutes(routes)}
+        <Route path="*" element={<Navigate to="/allUsers" />} />
+      </Routes>
+    </PersistentDrawerLeft>
     // <PaymentData />
     // </>
   );

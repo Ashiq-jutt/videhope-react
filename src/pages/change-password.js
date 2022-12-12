@@ -11,7 +11,7 @@ import React from "react";
 // import { View, Text } from "react-native";
 import { Box } from "@mui/system";
 import * as SVG from "../assets";
-function ChangePassword() {
+function ChangePassword({ handleCheck }) {
   return (
     <Stack alignItems="center">
       <Stack
@@ -22,7 +22,7 @@ function ChangePassword() {
         mt={"80px"}
         // ml={"20px"}
       >
-        <img src={SVG.left} />
+        <img src={SVG.left} onClick={() => handleCheck(0)} />
         <h2>Change Password</h2>
         <h1></h1>
       </Stack>
@@ -33,7 +33,7 @@ function ChangePassword() {
           padding: 8,
           marginTop: "12px",
           borderRadius: "12px",
-          width: "300px",
+          // width: "300px",
         }}
       >
         <InputLabel sx={{ mb: 1, fontstyle: "normal", fontweight: 400 }}>
@@ -93,6 +93,7 @@ function ChangePassword() {
           }}
           name="email"
         />
+        <br />
         <Button sx={{ ml: 7, backgroundColor: "#014BC3", color: "white" }}>
           Save changes
         </Button>
