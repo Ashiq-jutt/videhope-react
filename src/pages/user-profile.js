@@ -19,6 +19,7 @@ import UserData from "../components/userData";
 import profile from "../assets/profile.svg";
 import Paper from "@mui/material/Paper";
 import TableContainer from "@mui/material/TableContainer";
+import { Image } from "@mui/icons-material";
 function UserProfile() {
   var arr = [
     {
@@ -249,6 +250,58 @@ function UserProfile() {
             Diy
           </Button>
         </Box>
+
+        <Typography
+          sx={{
+            color: "#000000",
+            fontFamily: "Roboto",
+            fontSize: "15px",
+            mt: 2,
+          }}
+        >
+          Services
+        </Typography>
+
+        <Box
+          spacing={2}
+          border={"2px solid grey"}
+          borderRadius={"5px"}
+          direction="row"
+        >
+          {[0].map((item, index) => (
+            <Stack width="250px" paddingX={"22px"} paddingY={"12px"}>
+              <img src={SVG.servicePhoto} width={158} height={182} mt={20} />
+              <Stack
+                direction={"row"}
+                position={"absolute"}
+                width={158}
+                my={16.8}
+                mx={1}
+                justifyContent="space-between"
+              >
+                <Typography
+                  color="rgba(255, 255, 255, 0.95)"
+                  fontFamily={"Roboto"}
+                  // fontFamily={"Avenir LT Std"}
+                  fontSize={13}
+                >
+                  I will sing a song for you
+                </Typography>
+                <Typography
+                  color="rgba(255, 255, 255, 0.95)"
+                  // fontFamily={"Avenir LT Std"}
+                  fontFamily={"Roboto"}
+                  fontSize={12}
+                  mr={1.4}
+                  mt={2}
+                >
+                  $4.9
+                </Typography>
+              </Stack>
+            </Stack>
+          ))}
+        </Box>
+
         <Typography
           sx={{
             color: "#000000",
