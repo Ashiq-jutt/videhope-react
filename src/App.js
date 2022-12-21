@@ -96,10 +96,10 @@ function App() {
   return (
     // <img src={employedPortal} />
     <>
-      {/* <EmployeePortal />
+      <EmployeePortal />
       <NewestDetail />
-      <EditProfile /> */}
-      {/* <ContentReport /> */}
+      <EditProfile />
+      <ContentReport />
       <PastWithDrawal />
     </>
     // <PersistentDrawerLeft routes={routes}>

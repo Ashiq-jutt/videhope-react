@@ -70,24 +70,25 @@ const PastWithDrawal = () => {
                 <img
                   src={repoeredImg}
                   style={{
-                    height: 140,
+                    height: 120,
                     width: 140,
-                    borderTopLeftRadius: "30px",
-                    borderTopRightRadius: "30px",
+                    borderTopLeftRadius: "25px",
+                    borderTopRightRadius: "25px",
                   }}
                 />
               </Box>
-              <Button
+              <Box
                 sx={{
                   variant: "outlined",
-                  color: "black",
                   boxShadow: "1px 1px 2px  #000",
                   width: "140px",
                   height: "30px",
                   borderRadius: "10px",
+                  bgcolor: "White",
+                  position: "-webkit-sticky",
                   mt: -3,
                 }}
-              ></Button>
+              ></Box>
               <Button
                 sx={{
                   variant: "outlined",
