@@ -1,15 +1,24 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
 import "./App.css";
 import PersistentDrawerLeft from "./components/drawer";
 import SignIn from "./pages/sigIn";
 import AllUser from "./pages/allUser";
-import { Icon } from "@mui/material";
+import { Box, Icon, Paper } from "@mui/material";
 import PaymentData from "./pages/paymentData";
 import Setting from "./pages/setting";
 import Earnings from "./pages/earnings";
 import ReportContent from "./pages/report-content";
 import ChangeName from "./pages/change-name";
 import UserProfile from "./pages/user-profile";
+import Table from "./pages/image-file";
+import FileImage from "./pages/image-file";
+import { employedPortal } from "./assets/images";
+import EmployePortal from "./pages/employe-portal";
+import EmployeePortal from "./pages/employe-portal";
+import EmployeeDetail from "./pages/newest-detail";
+import NewestDetail from "./pages/newest-detail";
+// import Home from "./pages/test";
 const routes = [
   {
     type: "collapse",
@@ -79,17 +88,20 @@ const getRoutes = (allRoutes) =>
 
     return null;
   });
+
 function App() {
   return (
-    // <UserProfile />
-    <PersistentDrawerLeft routes={routes}>
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/allUsers" />} />
-      </Routes>
-    </PersistentDrawerLeft>
+    // <img src={employedPortal} />
+    // <EmployeePortal />
+    <NewestDetail />
+    // <PersistentDrawerLeft routes={routes}>
+    //   <Routes>
+    //     {getRoutes(routes)}
+    //     <Route path="*" element={<Navigate to="/allUsers" />} />
+    //     <Route path="/userProfile" element={<UserProfile />} />
+    //   </Routes>
+    // </PersistentDrawerLeft>
     // <PaymentData />
-    // </>
   );
 }
 

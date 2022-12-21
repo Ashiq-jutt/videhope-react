@@ -10,6 +10,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Slider,
 } from "@mui/material";
 import React from "react";
 // import { View, Text } from "react-native";
@@ -21,7 +22,18 @@ import Paper from "@mui/material/Paper";
 import TableContainer from "@mui/material/TableContainer";
 import { Image } from "@mui/icons-material";
 import { serviceImg } from "../assets/images";
+function valuetext(value) {
+  return `${value}°C`;
+}
 function UserProfile() {
+  const [check, setCheck] = React.useState(false);
+  const [ide, setIde] = React.useState("");
+  const handleCheck = (id) => {
+    setIde(id);
+    setCheck(!check);
+  };
+
+  var buttonType = ["music", "Photography", "Food", "Diy"];
   var arr = [
     {
       id: 1,
@@ -65,6 +77,11 @@ function UserProfile() {
       content: "'$125.56'",
     },
   ];
+  const [value, setValue] = React.useState([20, 37]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <Container alignItems="center">
       <Stack
@@ -193,63 +210,29 @@ function UserProfile() {
         >
           Interests
         </Typography>
-        <Box border={"2px solid grey"} padding={"15px"} borderRadius={"5px"}>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#000000",
-              fontFamily: "Avenir LT Std",
-              fontSize: "12px",
-              borderRadius: "35px",
-              borderWidth: 1,
-              borderColor: "#000000",
-              ml: 6,
-            }}
-          >
-            Music
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#000000",
-              fontFamily: "Avenir LT Std",
-              fontSize: "12px",
-              borderRadius: "35px",
-              borderWidth: 1,
-              ml: 2,
-              borderColor: "#000000",
-            }}
-          >
-            Photography
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#000000",
-              fontFamily: "Avenir LT Std",
-              fontSize: "12px",
-              borderRadius: "35px",
-              borderWidth: 1,
-              ml: 2,
-              borderColor: "#000000",
-            }}
-          >
-            Food
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#000000",
-              fontFamily: "Avenir LT Std",
-              fontSize: "12px",
-              borderRadius: "35px",
-              borderWidth: 1,
-              ml: 2,
-              borderColor: "#000000",
-            }}
-          >
-            Diy
-          </Button>
+        <Box
+          border={"2px solid grey"}
+          // paddingLeft="20px"
+          padding={"15px"}
+          borderRadius={"5px"}
+        >
+          {buttonType.map((item) => (
+            <Button
+              variant="outlined"
+              key={item}
+              sx={{
+                color: "#000000",
+                fontFamily: "Avenir LT Std",
+                fontSize: "12px",
+                borderRadius: "35px",
+                // border: "5px dashed green",
+                borderColor: "#000000",
+                ml: 2,
+              }}
+            >
+              {item}
+            </Button>
+          ))}
         </Box>
 
         <Typography
@@ -271,7 +254,7 @@ function UserProfile() {
           container
           alignSelf="center"
         >
-          {[0, 1, 2, 3, 4, 5, 6, 4, 4, 4].map((item, index) => (
+          {[0, 1, 2, 3, 4, 5, 6, 4, 4, 4].map((item) => (
             <Grid xs={12} md={3} sm={6}>
               <img src={serviceImg} width={"100%"} height={182} mt={20} />
               {/* <Grid
@@ -280,6 +263,7 @@ function UserProfile() {
                 justifyContent="space-between"
                 width={284}
               > */}
+
               <Typography
                 color="rgba(255, 255, 255, 0.95)"
                 // color={"red"}
@@ -329,8 +313,12 @@ function UserProfile() {
             <TableBody sx={{ height: 20 }}>
               {arr.map((row) => (
                 <TableRow
+                  // onClick={() => (setIde(row.id), setCheck(!check))}
                   key={row.id}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  sx={{
+                    "&:last-child td, &:last-child th": { border: 0 },
+                    // backgroundColor: check ? "green" : "red",
+                  }}
                 >
                   <TableCell align="center" scope="row">
                     <Grid container alignItems={"center"}>
@@ -349,6 +337,16 @@ function UserProfile() {
           </Table>
           {/* </TableContainer> */}
         </Paper>
+        <Typography mt="55px"></Typography>
+
+        <Slider
+          getAriaLabel={() => "Temperature range"}
+          value={value}
+          onChange={handleChange}
+          valueLabelDisplay="auto"
+          getAriaValueText={valuetext}
+        />
+        <Typography mt="55px"></Typography>
       </Box>
     </Container>
   );

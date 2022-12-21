@@ -6,6 +6,7 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Slider,
 } from "@mui/material";
 import React from "react";
 // import ControlledOpenSelect from "../components/selector";
@@ -14,10 +15,10 @@ export default function AllUser() {
   const [age, setAge] = React.useState("");
   return (
     <Container maxWidth="xl">
-      <Grid justifyContent={'space-between'} alignItems={'center'} container>
+      <Grid justifyContent={"space-between"} alignItems={"center"} container>
         <h2>All users (344)</h2>
         <div>
-          <FormControl sx={{ minWidth: '200px' }} size={'small'}>
+          <FormControl sx={{ minWidth: "200px" }} size={"small"}>
             <InputLabel id="demo-simple-select-label">users</InputLabel>
             <Select
               labelId="demo-simple-select-label"

@@ -8,6 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import profile from "../assets/profile.svg";
 import Paper from "@mui/material/Paper";
 import { Grid, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -115,13 +116,14 @@ var arr = [
   },
 ];
 export default function UserData() {
+  const navigate = useNavigate();
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+    <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 600 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell >Usernames</TableCell>
+              <TableCell>Usernames</TableCell>
               <TableCell align="center">Date joined</TableCell>
               <TableCell align="center">Private Content </TableCell>
               <TableCell align="center">Followers</TableCell>
@@ -135,11 +137,12 @@ export default function UserData() {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell align="center" scope="row">
-                  <Grid container alignItems={'center'}>
-                    <img src={row.profile} />
-                    <Typography ml={'10px'}>
-                      {`${row.email}`}
-                    </Typography>
+                  <Grid container alignItems={"center"}>
+                    <img
+                      src={row.profile}
+                      onClick={() => navigate("/userProfile")}
+                    />
+                    <Typography ml={"10px"}>{`${row.email}`}</Typography>
                   </Grid>
                 </TableCell>
                 <TableCell align="center">{row.dateJoined}</TableCell>
@@ -148,7 +151,6 @@ export default function UserData() {
                 <TableCell align="center">{row.subscribers}</TableCell>
               </TableRow>
             ))}
-
           </TableBody>
         </Table>
       </TableContainer>

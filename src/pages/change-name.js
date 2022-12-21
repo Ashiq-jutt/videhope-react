@@ -8,7 +8,6 @@ import {
   Button,
 } from "@mui/material";
 import React from "react";
-// import { View, Text } from "react-native";
 import { Box } from "@mui/system";
 import * as SVG from "../assets";
 function ChangeName({ handleCheck }) {
