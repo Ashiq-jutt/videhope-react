@@ -18,6 +18,9 @@ import EmployePortal from "./pages/employe-portal";
 import EmployeePortal from "./pages/employe-portal";
 import EmployeeDetail from "./pages/newest-detail";
 import NewestDetail from "./pages/newest-detail";
+import EditProfile from "./pages/edit";
+import ContentReport from "./pages/content-report";
+import PastWithDrawal from "./pages/past-with-drawal";
 // import Home from "./pages/test";
 const routes = [
   {
@@ -92,8 +95,13 @@ const getRoutes = (allRoutes) =>
 function App() {
   return (
     // <img src={employedPortal} />
-    // <EmployeePortal />
-    <NewestDetail />
+    <>
+      {/* <EmployeePortal />
+      <NewestDetail />
+      <EditProfile /> */}
+      {/* <ContentReport /> */}
+      <PastWithDrawal />
+    </>
     // <PersistentDrawerLeft routes={routes}>
     //   <Routes>
     //     {getRoutes(routes)}
