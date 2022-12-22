@@ -24,14 +24,12 @@ const PastWithDrawal = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
-      //   height="100vh"
-      //   width="100vw"
     >
       <Button
         sx={{
           variant: "outlined",
           color: "black",
-          boxShadow: "1px 1px 5px  #000",
+          boxShadow: "1px 1px 3px  #000",
           width: "210px",
           height: "50px",
           borderBottomLeftRadius: "20px",
@@ -53,11 +51,11 @@ const PastWithDrawal = () => {
           display: "flex",
           flexWrap: "wrap",
           mx: 10,
-          p: 2,
+          p: 3,
         }}
       >
-        {[1, 2, 3, 3, 3, 3, 3].map((item, index) => (
-          <Grid m={3}>
+        {[1, 2, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3].map((item, index) => (
+          <Grid m={3} justifyContent="center">
             <Box
               sx={{
                 display: "flex",

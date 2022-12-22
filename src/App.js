@@ -13,7 +13,6 @@ import ChangeName from "./pages/change-name";
 import UserProfile from "./pages/user-profile";
 import Table from "./pages/image-file";
 import FileImage from "./pages/image-file";
-import { employedPortal } from "./assets/images";
 import EmployePortal from "./pages/employe-portal";
 import EmployeePortal from "./pages/employe-portal";
 import EmployeeDetail from "./pages/newest-detail";
@@ -21,6 +20,11 @@ import NewestDetail from "./pages/newest-detail";
 import EditProfile from "./pages/edit";
 import ContentReport from "./pages/content-report";
 import PastWithDrawal from "./pages/past-with-drawal";
+import Newest from "./pages/newest";
+import CreatePanel from "./pages/create-panel";
+import CustomerServices from "./pages/customer-services";
+import CustomerLogin from "./pages/cutomer-ligin";
+import CreatorPanelLogin from "./pages/creator-panel-login";
 // import Home from "./pages/test";
 const routes = [
   {
@@ -96,11 +100,16 @@ function App() {
   return (
     // <img src={employedPortal} />
     <>
-      <EmployeePortal />
+      {/* <EmployeePortal />
       <NewestDetail />
       <EditProfile />
-      <ContentReport />
+      <ContentReport /> 
       <PastWithDrawal />
+      <Newest />
+      <CreatePanel />
+      <CustomerServices />
+      <CustomerLogin />*/}
+      <CreatorPanelLogin />
     </>
     // <PersistentDrawerLeft routes={routes}>
     //   <Routes>

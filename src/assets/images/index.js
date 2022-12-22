@@ -3,3 +3,7 @@ export { default as repoeredImg } from "./reported-img.png";
 export { default as employedPortal } from "./employed-portal.png";
 export { default as empPic } from "./emp-pic.png";
 export { default as newestPic } from "./newest-pic.png";
+export { default as createPanel } from "./creator-panel.png";
+export { default as customerServices } from "./customer-services.png";
+export { default as CustomerServicesImage } from "./customer-service-pic.png";
+export { default as createpanaelLoginImage } from "./create-panel-login.png";
