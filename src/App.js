@@ -25,6 +25,7 @@ import CreatePanel from "./pages/create-panel";
 import CustomerServices from "./pages/customer-services";
 import CustomerLogin from "./pages/cutomer-ligin";
 import CreatorPanelLogin from "./pages/creator-panel-login";
+import Accounting from "./pages/accounting";
 // import Home from "./pages/test";
 const routes = [
   {
@@ -108,8 +109,9 @@ function App() {
       <Newest />
       <CreatePanel />
       <CustomerServices />
-      <CustomerLogin />*/}
-      <CreatorPanelLogin />
+      <CustomerLogin />
+      <CreatorPanelLogin />*/}
+      <Accounting />
     </>
     // <PersistentDrawerLeft routes={routes}>
     //   <Routes>
