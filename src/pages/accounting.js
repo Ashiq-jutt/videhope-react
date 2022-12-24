@@ -21,6 +21,7 @@ const Accounting = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
+      mt={'-40px'}
     >
       <Box
         sx={{
@@ -38,7 +39,7 @@ const Accounting = () => {
         <Box
           mb={1.5}
           sx={{
-            px: 20,
+            px: '100px',
             //   width: "cal(100% - 700px)",
             bgcolor: "white",
             boxShadow: "2px 2px 4px  #000",

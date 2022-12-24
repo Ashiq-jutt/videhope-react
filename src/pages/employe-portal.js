@@ -5,22 +5,32 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Tooltip from "@mui/material/Tooltip";
 const EmployeePortal = () => {
   return (
-    <Grid container alignItems={"center"} justifyContent={"center"}>
-      <Grid container alignItems={"center"} justifyContent={"center"}>
-        <img src={employedPortal} />
-      </Grid>
-      <Button
-        sx={{
-          mt: 2,
-          bgcolor: "#0288d1",
-          height: "40px",
-          width: "320px",
-          borderRadius: "16px",
-          color: "#fff",
-        }}
-      >
-        Create New User
-      </Button>
+    <Grid>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <Box>
+          <img src={employedPortal} />
+        </Box>
+        <Box>
+          <Button
+            sx={{
+              mt: '20px',
+              mb: '30px',
+              bgcolor: "#0288d1",
+              height: "40px",
+              width: "320px",
+              borderRadius: "16px",
+              color: "#fff",
+            }}
+          >
+            Create New User
+          </Button>
+        </Box>
+      </Box>
       <Grid container justifyContent="center">
         {[0, 1, 2, 3, 4, 6].map((item) => (
           <Box
@@ -29,32 +39,38 @@ const EmployeePortal = () => {
               boxShadow: "3px 4px 10px  #000",
               // shadowOpacity: 0.46,
               width: "28rem",
-              height: "3rem",
+              // height: "3rem",
               // height: 60,
               // lineHeight: "3rem",
               bgcolor: "#fff",
               // "&:hover": {
-              //   backgroundColor: "grey",
+              backgroundColor: "white",
               //   opacity: [0.9, 0.8, 0.7],
               // },
               // border: ".4px solid grey",
-              p: 2,
-              m: 3,
+              px: '3px',
+              py: '5px',
+              my: '10px',
+              mx: '20px',
               borderRadius: 3,
             }}
           >
-            <Grid container alignItems={"center"}>
-              <img
-                src={empPic}
-                style={{
-                  height: "50px",
-                  width: "50px",
-                  borderRadius: "100px",
-                  // resize: "-moz-initial",
-                }}
-              />
-              <Typography ml={2}>Ahmad</Typography>
-              <Box>
+            <Grid container alignItems={"center"} justifyContent={'space-between'}>
+              <Box display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                <Box>
+                  <img
+                    src={empPic}
+                    style={{
+                      height: "50px",
+                      width: "50px",
+                      borderRadius: "100px",
+                      // resize: "-moz-initial",
+                    }}
+                  />
+                </Box>
+                <Typography ml={'5px'}>Ahmad</Typography>
+              </Box>
+              <Box display={'flex'} alignItems={'flex-end'} flexDirection={'column'}>
                 <Button
                   sx={{
                     borderRadius: 10,
@@ -75,6 +91,7 @@ const EmployeePortal = () => {
                     borderRadius: 10,
                     height: "26px",
                     width: "170px",
+                    mt: '15px',
                     // ml: 33.5,
                     // mt: -2.7,
                     color: "#fff",

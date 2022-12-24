@@ -38,19 +38,19 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Payments",
-    key: "payments",
-    icon: "payments",
-    route: "/payments",
-    component: <PaymentData />,
+    name: "Accounting",
+    key: "Accounting",
+    icon: "Accounting",
+    route: "/Accounting",
+    component: <Accounting />,
   },
   {
     type: "collapse",
-    name: "Earnings",
-    key: "earnings",
-    icon: "earnings",
-    route: "/earnings",
-    component: <Earnings />,
+    name: "CreatePortal",
+    key: "CreatePortal",
+    icon: "CreatePortal",
+    route: "/CreatePortal",
+    component: <CreatePanel />,
   },
   {
     type: "collapse",
@@ -102,7 +102,7 @@ function App() {
     <PersistentDrawerLeft routes={routes}>
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/allUsers" />} />
+        <Route path="*" element={<Navigate to="/dashboard" />} />
         <Route path="/userProfile" element={<UserProfile />} />
       </Routes>
     </PersistentDrawerLeft>
