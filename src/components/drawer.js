@@ -19,6 +19,7 @@ import * as React from "react";
 import { Link, useLocation, useMatch } from "react-router-dom";
 import * as SVG from "../assets";
 import logo from "../assets/logo.svg";
+import { dash } from "../assets/svgs";
 
 const drawerWidth = 240;
 
@@ -150,7 +151,7 @@ export default function PersistentDrawerLeft({ children, routes }) {
                       }}
                     >
                       <ListItemIcon>
-                        <img src={iconName} />
+                        <img src={dash} />
                       </ListItemIcon>
                       <ListItemText sx={{ color: "white" }} primary={name} />
                     </ListItemButton>

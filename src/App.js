@@ -30,11 +30,11 @@ import Accounting from "./pages/accounting";
 const routes = [
   {
     type: "collapse",
-    name: "All Users",
+    name: "Dashboard",
     key: "users",
-    icon: "group",
-    route: "/allUsers",
-    component: <AllUser />,
+    icon: "dash",
+    route: "/dashboard",
+    component: <EmployeePortal />,
   },
   {
     type: "collapse",
@@ -99,27 +99,13 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-    // <img src={employedPortal} />
-    <>
-      {/* <EmployeePortal />
-      <NewestDetail />
-      <EditProfile />
-      <ContentReport /> 
-      <PastWithDrawal />
-      <Newest />
-      <CreatePanel />
-      <CustomerServices />
-      <CustomerLogin />
-      <CreatorPanelLogin />*/}
-      <Accounting />
-    </>
-    // <PersistentDrawerLeft routes={routes}>
-    //   <Routes>
-    //     {getRoutes(routes)}
-    //     <Route path="*" element={<Navigate to="/allUsers" />} />
-    //     <Route path="/userProfile" element={<UserProfile />} />
-    //   </Routes>
-    // </PersistentDrawerLeft>
+    <PersistentDrawerLeft routes={routes}>
+      <Routes>
+        {getRoutes(routes)}
+        <Route path="*" element={<Navigate to="/allUsers" />} />
+        <Route path="/userProfile" element={<UserProfile />} />
+      </Routes>
+    </PersistentDrawerLeft>
     // <PaymentData />
   );
 }

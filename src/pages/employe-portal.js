@@ -1,5 +1,4 @@
-import { Button, Divider, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import { employedPortal, empPic, serviceImg } from "../assets/images";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -29,7 +28,6 @@ const EmployeePortal = () => {
             sx={{
               boxShadow: "3px 4px 10px  #000",
               // shadowOpacity: 0.46,
-
               width: "28rem",
               height: "3rem",
               // height: 60,
@@ -56,33 +54,35 @@ const EmployeePortal = () => {
                 }}
               />
               <Typography ml={2}>Ahmad</Typography>
-              <Button
-                sx={{
-                  borderRadius: 10,
-                  height: "26px",
-                  width: "170px",
-                  bgcolor: "#0288d1",
-                  ml: 19,
-                  mt: -4.5,
-                  color: "#fff",
-                  fontSize: 12,
-                }}
-              >
-                Detail
-              </Button>
-              <Button
-                sx={{
-                  bgcolor: "#ff9800",
-                  borderRadius: 10,
-                  height: "26px",
-                  width: "170px",
-                  ml: 33.5,
-                  mt: -2.7,
-                  color: "#fff",
-                }}
-              >
-                Edit
-              </Button>
+              <Box>
+                <Button
+                  sx={{
+                    borderRadius: 10,
+                    height: "26px",
+                    width: "170px",
+                    bgcolor: "#0288d1",
+                    // ml: 19,
+                    // mt: -4.5,
+                    color: "#fff",
+                    fontSize: 12,
+                  }}
+                >
+                  Detail
+                </Button>
+                <Button
+                  sx={{
+                    bgcolor: "#ff9800",
+                    borderRadius: 10,
+                    height: "26px",
+                    width: "170px",
+                    // ml: 33.5,
+                    // mt: -2.7,
+                    color: "#fff",
+                  }}
+                >
+                  Edit
+                </Button>
+              </Box>
             </Grid>
           </Box>
         ))}
