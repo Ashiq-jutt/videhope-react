@@ -17,9 +17,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { Link, useLocation, useMatch } from "react-router-dom";
-import * as SVG from "../assets";
 import logo from "../assets/logo.svg";
-import { dash } from "../assets/svgs";
+import * as SVG from "../assets/svgs";
 
 const drawerWidth = 240;
 
@@ -74,7 +73,7 @@ export default function PersistentDrawerLeft({ children, routes }) {
   // const match = useMatch();
   // console.log('match=>>', match);
   const loc = useLocation();
-  console.log("log=>>>", loc);
+
   const [open, setOpen] = React.useState(false);
   const [route, setRoute] = React.useState("users");
 
@@ -144,14 +143,14 @@ export default function PersistentDrawerLeft({ children, routes }) {
                   <ListItem key={index} disablePadding>
                     <ListItemButton
                       style={{
-                        width: "220px",
+                        width: "200px",
                         borderRadius: "10px",
                         backgroundColor:
                           route === loc.pathname ? "#014BC3" : null,
                       }}
                     >
                       <ListItemIcon>
-                        <img src={dash} />
+                        <img src={iconName} />
                       </ListItemIcon>
                       <ListItemText sx={{ color: "white" }} primary={name} />
                     </ListItemButton>
@@ -163,7 +162,17 @@ export default function PersistentDrawerLeft({ children, routes }) {
           <Box position={"absolute"} bottom={"30px"} width={"100%"}>
             <Link style={{ textDecoration: "none" }} to={"/earnings"}>
               <ListItem key={6} disablePadding>
-                <ListItemButton style={{ width: "220px" }}>
+                <ListItemButton style={{ width: "200px" }}>
+                  <ListItemIcon>
+                    <img src={SVG.settings} />
+                  </ListItemIcon>
+                  <ListItemText sx={{ color: "white" }} primary={"Setting"} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+            <Link style={{ textDecoration: "none" }} to={"/earnings"}>
+              <ListItem key={6} disablePadding>
+                <ListItemButton style={{ width: "200px" }}>
                   <ListItemIcon>
                     <img src={SVG.logout} />
                   </ListItemIcon>
