@@ -26,6 +26,8 @@ import CustomerServices from "./pages/customer-services";
 import CustomerLogin from "./pages/cutomer-ligin";
 import CreatorPanelLogin from "./pages/creator-panel-login";
 import Accounting from "./pages/accounting";
+import CreateNewUser from "./pages/create-new-user";
+import AccountReported from "./pages/account-reported";
 // import Home from "./pages/test";
 const routes = [
   {
@@ -40,7 +42,7 @@ const routes = [
     type: "collapse",
     name: "Accounting",
     key: "Accounting",
-    icon: "accounting",
+    icon: "Accounting",
     route: "/Accounting",
     component: <Accounting />,
   },
@@ -48,25 +50,33 @@ const routes = [
     type: "collapse",
     name: "CreatePortal",
     key: "CreatePortal",
-    icon: "creator",
+    icon: "CreatePortal",
     route: "/CreatePortal",
     component: <CreatePanel />,
   },
   {
     type: "collapse",
-    name: "Customer Service",
+    name: "Reported content",
     key: "reportedContent",
-    icon: "customerService",
+    icon: "reportedContent",
     route: "/reportedContent",
-    component: <ContentReport />,
+    component: <ReportContent />,
   },
   {
     type: "collapse",
-    name: "Employee Portal",
+    name: "Settings",
     key: "settings",
-    icon: "employeePortal",
+    icon: "settings",
     route: "/settings",
-    component: <EmployePortal />,
+    component: <Setting />,
+  },
+  {
+    type: "collapse",
+    name: "signout",
+    key: "signout",
+    icon: "logout",
+    route: "/signout",
+    component: <SignIn />,
   },
 ];
 const getRoutes = (allRoutes) =>
@@ -91,14 +101,15 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-    <PersistentDrawerLeft routes={routes}>
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboard" />} />
-        <Route path="/userProfile" element={<UserProfile />} />
-      </Routes>
-    </PersistentDrawerLeft>
-    // <PaymentData />
+    // <AllUser />
+    // <PersistentDrawerLeft routes={routes}>
+    //   <Routes>
+    //     {getRoutes(routes)}
+    //     <Route path="*" element={<Navigate to="/dashboard" />} />
+    //     <Route path="/userProfile" element={<UserProfile />} />
+    //   </Routes>
+    // </PersistentDrawerLeft>
+    <AccountReported />
   );
 }
 
