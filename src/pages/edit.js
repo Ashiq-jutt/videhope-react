@@ -45,11 +45,7 @@ const EditProfile = () => {
           mt: -2,
         }}
       >
-        hjk
-        {/* <Box sx={{ typography: "subtitle2" }}>subtitle2</Box> */}
-        {/* <Typography mt={2} variant="caption">
-          Edit
-        </Typography> */}
+        Edit
       </Button>
       <Box
         sx={{

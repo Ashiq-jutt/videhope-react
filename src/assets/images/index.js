@@ -9,3 +9,5 @@ export { default as CustomerServicesImage } from "./customer-service-pic.png";
 export { default as createpanaelLoginImage } from "./create-panel-login.png";
 export { default as accountingImage } from "./accounting-pic.png";
 export { default as createNewUser } from "./create-new-user.png";
+export { default as line } from "./line.png";
+export { default as creatorImage } from "./creator-image.png";

@@ -14,7 +14,7 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-arr = [
+var arr = [
   {
     id: 1,
     profile: profile,

@@ -110,6 +110,7 @@ function App() {
     //   </Routes>
     // </PersistentDrawerLeft>
     <AccountReported />
+    // <NewestDetail />
   );
 }
 

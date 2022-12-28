@@ -17,176 +17,185 @@ import {
   TableBody,
 } from "@mui/material";
 import React from "react";
-import {
-  createpanaelLoginImage,
-  CustomerServicesImage,
-} from "../assets/images";
-import AllUser from "./allUser";
-// import Masonry from "@mui/lab/Masonry";
+import { useNavigate } from "react-router-dom";
+import { line } from "../assets/images";
+import profile from "../assets/profile.svg";
+import creatorImage from "../assets/images/creator-image.png";
 const AccountReported = () => {
-  arr = [
+  var arr = [
     {
       id: 1,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: 123,
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 1,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: 123,
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 1,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: 123,
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 1,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: 123,
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 1,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: 123,
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 2,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 3,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 4,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 5,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 6,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
     {
       id: 7,
-      profile: profile,
-      email: "1@gmail.com",
-      dateJoined: "12/02/22",
-      folowers: 455,
-      content: "123",
-      subscribers: "455",
+      profile: creatorImage,
+      email: "rosemary@gmail.com",
+      creatorName: "Rose Marry",
+      address: "20 Cooper Square, New York, NY 10003, USA",
     },
   ];
+  const navigate = useNavigate();
+
   return (
     <Box
       display={"flex"}
-      justifyContent={"center"}
+      justifycreatorName={"center"}
       alignItems={"center"}
       flexDirection="column"
-      p={10}
-      m={20}
-      boxShadow="1px 1px 10px  #000"
+      px={"10%"}
+      // m={20}
+      // boxShadow="1px 1px 10px  #000"
     >
+      <Button
+        sx={{
+          variant: "outlined",
+          color: "black",
+          boxShadow: "1px 1px 5px  #000",
+          width: "180px",
+          height: "40px",
+          borderBottomLeftRadius: "20px",
+          borderBottomRightRadius: "20px",
+          mt: -1 / 2,
+        }}
+      >
+        Account Reported
+      </Button>
       <Box
         sx={{
           //   width: "cal(100% - 700px)",
-          bgcolor: "white",
-          boxShadow: "1px 1px 2px  #000",
-          borderBottomLeftRadius: "50px",
-          borderBottomRightRadius: "50px",
+          boxShadow: "2px 4px 6px  #000",
+          // borderRadius: "30px",
+          my: 3,
+          pr: 8,
           display: "flex",
+          // bgcolor: "red",
           bgcolor: "white",
           flexDirection: "column",
-          mb: 1,
+          width: "100%",
         }}
-        justifyContent={"center"}
+        justifycreatorName={"center"}
         alignItems={"center"}
       >
-        <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 600 }}>
-            <Table stickyHeader aria-label="sticky table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Usernames</TableCell>
-                  <TableCell align="center">Date joined</TableCell>
-                  <TableCell align="center">Private Content </TableCell>
-                  <TableCell align="center">Followers</TableCell>
-                  <TableCell align="center">Subscribers</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody sx={{ height: 20 }}>
-                {arr.map((row) => (
-                  <TableRow
-                    key={row.id}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell align="center" scope="row">
-                      <Grid container alignItems={"center"}>
-                        <img
-                          src={row.profile}
-                          onClick={() => navigate("/userProfile")}
-                        />
-                        <Typography ml={"10px"}>{`${row.email}`}</Typography>
-                      </Grid>
-                    </TableCell>
-                    <TableCell align="center">{row.dateJoined}</TableCell>
-                    <TableCell align="center">{row.content}</TableCell>
-                    <TableCell align="center">{row.folowers}</TableCell>
-                    <TableCell align="center">{row.subscribers}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Paper>
+        {/* <Paper sx={{ width: "100%", overflow: "hidden" }}>
+          <TableContainer sx={{ maxHeight: 600 }}> */}
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Creator Name</TableCell>
+              <TableCell>
+                <img src={line} height={"30px"} />
+              </TableCell>
+              <TableCell align="center">Email </TableCell>
+              <TableCell>
+                <img src={line} height={"30px"} />
+              </TableCell>
+              <TableCell align="center">Address</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {arr.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell
+                  sx={{
+                    align: "center",
+                  }}
+                >
+                  <Grid container alignItems={"center"} ml={-2.5}>
+                    <img
+                      src={row.profile}
+                      width={"38px"}
+                      // onClick={() => navigate("/userProfile")}
+                    />
+                    <Typography ml={"10px"}>{`${row.creatorName}`}</Typography>
+                  </Grid>
+                </TableCell>
+                <TableCell></TableCell>
+                <TableCell
+                  align="center"
+                  sx={{ boxShadow: "0px 0px 4px  #000" }}
+                >
+                  {row.email}
+                </TableCell>
+                <TableCell></TableCell>
+                <TableCell
+                  align="center"
+                  sx={{ boxShadow: "0px 0px 4px  #000", m: "10px" }}
+                >
+                  {row.address}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        {/* </TableContainer>
+        </Paper> */}
       </Box>
     </Box>
   );
