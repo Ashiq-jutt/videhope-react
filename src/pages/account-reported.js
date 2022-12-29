@@ -18,9 +18,8 @@ import {
 } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { line } from "../assets/images";
+import { line, creatorImage } from "../assets/images";
 import profile from "../assets/profile.svg";
-import creatorImage from "../assets/images/creator-image.png";
 const AccountReported = () => {
   var arr = [
     {

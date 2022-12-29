@@ -28,6 +28,9 @@ import CreatorPanelLogin from "./pages/creator-panel-login";
 import Accounting from "./pages/accounting";
 import CreateNewUser from "./pages/create-new-user";
 import AccountReported from "./pages/account-reported";
+import Detail from "./pages/detail";
+import Test from "./pages/test";
+import WithdrawRwquest from "./pages/withdraw-request";
 // import Home from "./pages/test";
 const routes = [
   {
@@ -109,8 +112,8 @@ function App() {
     //     <Route path="/userProfile" element={<UserProfile />} />
     //   </Routes>
     // </PersistentDrawerLeft>
-    <AccountReported />
-    // <NewestDetail />
+    // <Detail />
+    <WithdrawRwquest />
   );
 }
 
