@@ -67,11 +67,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Settings",
-    key: "settings",
-    icon: "settings",
-    route: "/settings",
-    component: <Setting />,
+    name: "Customer Service",
+    key: "customerService",
+    icon: "customerService",
+    route: "/customerService",
+    component: <CustomerServices />,
   },
   {
     type: "collapse",
@@ -104,16 +104,17 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-    // <AllUser />
-    // <PersistentDrawerLeft routes={routes}>
-    //   <Routes>
-    //     {getRoutes(routes)}
-    //     <Route path="*" element={<Navigate to="/dashboard" />} />
-    //     <Route path="/userProfile" element={<UserProfile />} />
-    //   </Routes>
-    // </PersistentDrawerLeft>
-    // <Detail />
-    <WithdrawRwquest />
+    <PersistentDrawerLeft routes={routes}>
+      <Routes>
+        {getRoutes(routes)}
+        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/userProfile" element={<UserProfile />} />
+        <Route path="/allUsers" element={<UserData />} />
+        <Route path="/createNewUser" element={<CreateNewUser />} />
+        <Route path="/newestDetail" element={<NewestDetail />} />
+        <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
+      </Routes>
+    </PersistentDrawerLeft>
   );
 }
 

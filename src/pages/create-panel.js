@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   createPanel,
   employedPortal,
@@ -18,6 +19,7 @@ import {
 } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
 const CreatePanel = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display={"flex"}
@@ -67,6 +69,7 @@ const CreatePanel = () => {
             >
               <Typography ml={1}>Unapproved</Typography>
               <Button
+                onClick={() => navigate('/newestDetail')}
                 sx={{ bgcolor: "blue", color: "white", borderRadius: "10px" }}
               >
                 12

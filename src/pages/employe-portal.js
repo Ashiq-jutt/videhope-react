@@ -3,7 +3,9 @@ import React from "react";
 import { employedPortal, empPic, serviceImg } from "../assets/images";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Tooltip from "@mui/material/Tooltip";
+import { useNavigate } from "react-router-dom";
 const EmployeePortal = () => {
+  const navigate = useNavigate();
   return (
     <Grid>
       <Box sx={{
@@ -17,6 +19,7 @@ const EmployeePortal = () => {
         </Box>
         <Box>
           <Button
+            onClick={() => navigate('/createNewUser')}
             sx={{
               mt: '20px',
               mb: '30px',

@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   customerServices,
   employedPortal,
@@ -18,6 +19,7 @@ import {
 } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
 const CustomerServices = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display={"flex"}
@@ -64,6 +66,7 @@ const CustomerServices = () => {
                   {item}
                 </Typography>
                 <Button
+                  onClick={() => navigate('/chat')}
                   sx={{
                     bgcolor: "grey",
                     color: "white",

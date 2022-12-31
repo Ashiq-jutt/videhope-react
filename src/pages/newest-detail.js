@@ -1,22 +1,13 @@
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
   Grid,
   Switch,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
-  employedPortal,
-  empPic,
-  newestPic,
-  serviceImg,
+  newestPic
 } from "../assets/images";
-import DeleteIcon from "@mui/icons-material/Delete";
-import Tooltip from "@mui/material/Tooltip";
 const NewestDetail = () => {
   const [checked, setChecked] = React.useState(true);
   const [checked1, setChecked1] = React.useState(true);
