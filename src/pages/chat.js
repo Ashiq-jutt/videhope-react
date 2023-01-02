@@ -48,7 +48,6 @@ export default function App() {
   return (
     <Box className={classes.container}>
       <Box className={classes.paper}>
-
       </Box>
       {/* <Paper className={classes.paper} zDepth={2}>
         <Paper id="style-1" className={classes.messagesBody}>
