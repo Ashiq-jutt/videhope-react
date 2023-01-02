@@ -44,6 +44,7 @@ const NewestDetail = () => {
           }}
         >
           <img
+            alt={'photoo here'}
             src={newestPic}
             style={{
               height: "220px",

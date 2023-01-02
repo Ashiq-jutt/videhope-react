@@ -1,9 +1,7 @@
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
-import { employedPortal, empPic, serviceImg } from "../assets/images";
-import DeleteIcon from "@mui/icons-material/Delete";
-import Tooltip from "@mui/material/Tooltip";
 import { useNavigate } from "react-router-dom";
+import { employedPortal, empPic } from "../assets/images";
 const EmployeePortal = () => {
   const navigate = useNavigate();
   return (
@@ -15,7 +13,7 @@ const EmployeePortal = () => {
         alignItems: 'center',
       }}>
         <Box>
-          <img src={employedPortal} />
+          <img alt="Pic here" src={employedPortal} />
         </Box>
         <Box>
           <Button
@@ -62,6 +60,7 @@ const EmployeePortal = () => {
               <Box display={'flex'} flexDirection={'row'} alignItems={'center'}>
                 <Box>
                   <img
+                    alt="Pic here"
                     src={empPic}
                     style={{
                       height: "50px",
@@ -75,6 +74,7 @@ const EmployeePortal = () => {
               </Box>
               <Box display={'flex'} alignItems={'flex-end'} flexDirection={'column'}>
                 <Button
+                  onClick={() => navigate('/detail')}
                   sx={{
                     borderRadius: 10,
                     height: "26px",
@@ -89,6 +89,7 @@ const EmployeePortal = () => {
                   Detail
                 </Button>
                 <Button
+                  onClick={() => navigate('/editProfile')}
                   sx={{
                     bgcolor: "#ff9800",
                     borderRadius: 10,

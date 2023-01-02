@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: sans-serif;
 }
 
 .App-logo {
@@ -112,7 +113,6 @@ text-align:justify;}
 #header .logo {
   padding: 20px;
 }
-
 @media only screen and (max-width: 720px) {
   html {
     overflow: hidden;
