@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-<<<<<<< HEAD
 // import React from "react";
 import "./App.css";
 import PersistentDrawerLeft from "./components/drawer";
@@ -13,26 +12,8 @@ import CreatePanel from "./pages/create-panel";
 import Accounting from "./pages/accounting";
 import CreatorEarning from "./pages/creator-earning";
 import FilterEarning from "./pages/filter-accounting";
+import CustomerServices from './pages/customer-services';
 
-=======
-import "./App.css";
-import PersistentDrawerLeft from "./components/drawer";
-import UserData from "./components/userData";
-import Accounting from "./pages/accounting";
-import CreateNewUser from "./pages/create-new-user";
-import CreatePanel from "./pages/create-panel";
-import CustomerServices from "./pages/customer-services";
-import EmployeePortal from "./pages/employe-portal";
-import NewestDetail from "./pages/newest-detail";
-import ReportContent from "./pages/report-content";
-import SignIn from "./pages/sigIn";
-import UserProfile from "./pages/user-profile";
-import WithdrawRwquest from "./pages/withdraw-request";
-import EditProfile from './pages/edit';
-import Detail from "./pages/detail";
-import Chat from "./pages/chat";
-// import Home from "./pages/test";
->>>>>>> fa443f5fa8e27df1994a7de4aad570fbf1d335d0
 const routes = [
   {
     type: "collapse",
@@ -105,7 +86,6 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-<<<<<<< HEAD
     // <AllUser />
     // <PersistentDrawerLeft routes={routes}>
     //   <Routes>
@@ -118,22 +98,20 @@ function App() {
     // <WithdrawRwquest />
     // <CreatorEarning />
     <FilterEarning />
-=======
-    <PersistentDrawerLeft routes={routes}>
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboard" />} />
-        <Route path="/userProfile" element={<UserProfile />} />
-        <Route path="/allUsers" element={<UserData />} />
-        <Route path="/createNewUser" element={<CreateNewUser />} />
-        <Route path="/newestDetail" element={<NewestDetail />} />
-        <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
-        <Route path="/editProfile" element={<EditProfile />} />
-        <Route path="/detail" element={<Detail />} />
-        <Route path="/chat" element={<Chat />} />
-      </Routes>
-    </PersistentDrawerLeft>
->>>>>>> fa443f5fa8e27df1994a7de4aad570fbf1d335d0
+    // <PersistentDrawerLeft routes={routes}>
+    //   <Routes>
+    //     {getRoutes(routes)}
+    //     <Route path="*" element={<Navigate to="/dashboard" />} />
+    //     <Route path="/userProfile" element={<UserProfile />} />
+    //     <Route path="/allUsers" element={<UserData />} />
+    //     <Route path="/createNewUser" element={<CreateNewUser />} />
+    //     <Route path="/newestDetail" element={<NewestDetail />} />
+    //     <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
+    //     <Route path="/editProfile" element={<EditProfile />} />
+    //     <Route path="/detail" element={<Detail />} />
+    //     <Route path="/chat" element={<Chat />} />
+    //   </Routes>
+    // </PersistentDrawerLeft>
   );
 }
 

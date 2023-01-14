@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { filterDashboardImage } from "../assets";
-import { filterProfile, withdrawPic } from "../assets/images";
+import { filterProfile, newestPic, withdrawPic } from "../assets/images";
 const FilterEarning = () => {
   return (
     <Box>
@@ -212,9 +212,13 @@ const FilterEarning = () => {
               >
                 <Grid container justifyContent={"center"} xs={4}>
                   <img
-                    source={withdrawPic}
-                    // alt="djfhnfj"
-                    style={{ height: 22, width: 33 }}
+                    alt="Pic here"
+                    src={withdrawPic}
+                    style={{
+                      height: "70px",
+                      width: "70px",
+                      borderRadius: "35px",
+                    }}
                   />
                 </Grid>
 
