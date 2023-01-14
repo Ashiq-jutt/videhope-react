@@ -162,6 +162,8 @@ const FilterEarning = () => {
                 fontSize={"18px"}
                 justifyContent={"center"}
                 xs={4}
+                borderLeft={1}
+                borderRight={1}
               >
                 Pending
               </Grid>
@@ -211,22 +213,89 @@ const FilterEarning = () => {
                 }}
               >
                 <Grid container justifyContent={"center"} xs={4}>
-                  <img
-                    alt="Pic here"
-                    src={withdrawPic}
-                    style={{
-                      height: "70px",
-                      width: "70px",
-                      borderRadius: "35px",
+                  <Box container sx={{ dispaly: "flex", direction: "row" }}>
+                    <img
+                      alt="Pic here"
+                      src={withdrawPic}
+                      style={{
+                        height: "87px",
+                        width: "84px",
+                        borderRadius: "100px",
+                      }}
+                    />
+                    <Typography>Ahmad</Typography>
+                  </Box>
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      bgcolor: "#e2e2e2 ",
+                      color: "white",
+                      // boxShadow: "2px 2px 4px  #000",
+                      borderRadius: "50px",
+                      width: "200px",
+                      mt: 1,
+                      height: "42px",
                     }}
-                  />
+                  >
+                    Detail
+                  </Button>
                 </Grid>
 
                 <Grid container justifyContent={"center"} xs={4}>
-                  20$
+                  <Box container sx={{ dispaly: "flex", direction: "row" }}>
+                    <img
+                      alt="Pic here"
+                      src={withdrawPic}
+                      style={{
+                        height: "87px",
+                        width: "84px",
+                        borderRadius: "100px",
+                      }}
+                    />
+                    <Typography>Ahmad</Typography>
+                  </Box>
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      bgcolor: "#e2e2e2 ",
+                      color: "white",
+                      // boxShadow: "2px 2px 4px  #000",
+                      borderRadius: "50px",
+                      width: "200px",
+                      mt: 1,
+                      height: "42px",
+                    }}
+                  >
+                    Detail
+                  </Button>
                 </Grid>
                 <Grid container justifyContent={"center"} xs={4}>
-                  3:04 pm
+                  <Box container sx={{ dispaly: "flex", direction: "row" }}>
+                    <img
+                      alt="Pic here"
+                      src={withdrawPic}
+                      style={{
+                        height: "87px",
+                        width: "84px",
+                        borderRadius: "100px",
+                      }}
+                    />
+                    <Typography>Ahmad</Typography>
+                  </Box>
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      bgcolor: "#e2e2e2 ",
+                      color: "white",
+                      // boxShadow: "2px 2px 4px  #000",
+                      borderRadius: "50px",
+                      width: "200px",
+                      mt: 1,
+                      height: "42px",
+                    }}
+                  >
+                    Detail
+                  </Button>
                 </Grid>
               </Grid>
             ))}

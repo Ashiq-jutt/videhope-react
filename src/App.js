@@ -12,7 +12,14 @@ import CreatePanel from "./pages/create-panel";
 import Accounting from "./pages/accounting";
 import CreatorEarning from "./pages/creator-earning";
 import FilterEarning from "./pages/filter-accounting";
-import CustomerServices from './pages/customer-services';
+import CustomerServices from "./pages/customer-services";
+import CreateNewUser from "./pages/create-new-user";
+import NewestDetail from "./pages/newest-detail";
+import WithdrawRwquest from "./pages/withdraw-request";
+import UserData from "./pages/allUser";
+import EditProfile from "./pages/edit";
+import Detail from "./pages/detail";
+import Chat from "./pages/chat";
 
 const routes = [
   {
@@ -86,18 +93,6 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-    // <AllUser />
-    // <PersistentDrawerLeft routes={routes}>
-    //   <Routes>
-    //     {getRoutes(routes)}
-    //     <Route path="*" element={<Navigate to="/dashboard" />} />
-    //     <Route path="/userProfile" element={<UserProfile />} />
-    //   </Routes>
-    // </PersistentDrawerLeft>
-    // <Detail />
-    // <WithdrawRwquest />
-    // <CreatorEarning />
-    <FilterEarning />
     // <PersistentDrawerLeft routes={routes}>
     //   <Routes>
     //     {getRoutes(routes)}
@@ -112,6 +107,7 @@ function App() {
     //     <Route path="/chat" element={<Chat />} />
     //   </Routes>
     // </PersistentDrawerLeft>
+    <FilterEarning />
   );
 }
 
