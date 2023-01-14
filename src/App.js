@@ -1,37 +1,17 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import React, { useState } from "react";
+// import React from "react";
 import "./App.css";
 import PersistentDrawerLeft from "./components/drawer";
 import SignIn from "./pages/sigIn";
-import AllUser from "./pages/allUser";
-import { Box, Icon, Paper } from "@mui/material";
-import PaymentData from "./pages/paymentData";
 import Setting from "./pages/setting";
-import Earnings from "./pages/earnings";
 import ReportContent from "./pages/report-content";
-import ChangeName from "./pages/change-name";
 import UserProfile from "./pages/user-profile";
-import Table from "./pages/image-file";
-import FileImage from "./pages/image-file";
-import EmployePortal from "./pages/employe-portal";
 import EmployeePortal from "./pages/employe-portal";
-import EmployeeDetail from "./pages/newest-detail";
-import NewestDetail from "./pages/newest-detail";
-import EditProfile from "./pages/edit";
-import ContentReport from "./pages/content-report";
-import PastWithDrawal from "./pages/past-with-drawal";
-import Newest from "./pages/newest";
 import CreatePanel from "./pages/create-panel";
-import CustomerServices from "./pages/customer-services";
-import CustomerLogin from "./pages/cutomer-ligin";
-import CreatorPanelLogin from "./pages/creator-panel-login";
 import Accounting from "./pages/accounting";
-import CreateNewUser from "./pages/create-new-user";
-import AccountReported from "./pages/account-reported";
-import Detail from "./pages/detail";
-import Test from "./pages/test";
-import WithdrawRwquest from "./pages/withdraw-request";
-// import Home from "./pages/test";
+import CreatorEarning from "./pages/creator-earning";
+import FilterEarning from "./pages/filter-accounting";
+
 const routes = [
   {
     type: "collapse",
@@ -113,7 +93,9 @@ function App() {
     //   </Routes>
     // </PersistentDrawerLeft>
     // <Detail />
-    <WithdrawRwquest />
+    // <WithdrawRwquest />
+    // <CreatorEarning />
+    <FilterEarning />
   );
 }
 

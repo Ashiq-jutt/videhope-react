@@ -12,3 +12,5 @@ export { default as createNewUser } from "./create-new-user.png";
 export { default as line } from "./line.png";
 export { default as creatorImage } from "./creator-image.png";
 export { default as withdrawPic } from "./withdraw-pic.png";
+export { default as creatorEarning } from "./creator-earning.png";
+export { default as filterProfile } from "./filter-profile.png";

@@ -8,3 +8,4 @@ export { default as left } from "./left.svg";
 export { default as menue } from "./menue.svg";
 export { default as profile } from "./profile.svg";
 export { default as servicePhoto } from "./service-photo.svg";
+export { default as filterDashboardImage } from "./filter-dashboard-img.svg";
