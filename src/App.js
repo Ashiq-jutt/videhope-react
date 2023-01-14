@@ -93,21 +93,20 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
-    // <PersistentDrawerLeft routes={routes}>
-    //   <Routes>
-    //     {getRoutes(routes)}
-    //     <Route path="*" element={<Navigate to="/dashboard" />} />
-    //     <Route path="/userProfile" element={<UserProfile />} />
-    //     <Route path="/allUsers" element={<UserData />} />
-    //     <Route path="/createNewUser" element={<CreateNewUser />} />
-    //     <Route path="/newestDetail" element={<NewestDetail />} />
-    //     <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
-    //     <Route path="/editProfile" element={<EditProfile />} />
-    //     <Route path="/detail" element={<Detail />} />
-    //     <Route path="/chat" element={<Chat />} />
-    //   </Routes>
-    // </PersistentDrawerLeft>
-    <FilterEarning />
+    <PersistentDrawerLeft routes={routes}>
+      <Routes>
+        {getRoutes(routes)}
+        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/userProfile" element={<UserProfile />} />
+        <Route path="/allUsers" element={<UserData />} />
+        <Route path="/createNewUser" element={<CreateNewUser />} />
+        <Route path="/newestDetail" element={<NewestDetail />} />
+        <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
+        <Route path="/editProfile" element={<EditProfile />} />
+        <Route path="/detail" element={<Detail />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </PersistentDrawerLeft>
   );
 }
 
