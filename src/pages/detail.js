@@ -1,26 +1,11 @@
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Switch,
-  Typography,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
+  Button, Grid, Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
-  employedPortal,
-  empPic,
-  newestPic,
-  serviceImg,
+  newestPic
 } from "../assets/images";
-import { line, creatorImage } from "../assets/images";
 const Detail = () => {
   return (
     <Box
@@ -64,6 +49,7 @@ const Detail = () => {
         >
           <Box>
             <img
+              alt="Pic here"
               src={newestPic}
               style={{
                 height: "170px",

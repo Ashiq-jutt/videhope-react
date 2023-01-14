@@ -1,22 +1,13 @@
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  Grid,
+  Button, Grid,
   Switch,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
-  employedPortal,
-  empPic,
-  newestPic,
-  serviceImg,
+  newestPic
 } from "../assets/images";
-import DeleteIcon from "@mui/icons-material/Delete";
-import Tooltip from "@mui/material/Tooltip";
 const EditProfile = () => {
   const [checked, setChecked] = React.useState(true);
   const [checked1, setChecked1] = React.useState(true);
@@ -70,6 +61,7 @@ const EditProfile = () => {
         >
           <Box>
             <img
+              alt={'pic here'}
               src={newestPic}
               style={{
                 height: "160px",
@@ -116,8 +108,8 @@ const EditProfile = () => {
             </Typography>
             <Typography>
               <Switch
-                checked1={checked1}
-                onChange={handleChange1}
+                checked1={checked}
+                onChange={handleChange}
                 inputProps={{ "aria-label": "controlled" }}
               />
             </Typography>

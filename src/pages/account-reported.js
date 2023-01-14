@@ -109,8 +109,8 @@ const AccountReported = () => {
       alignItems={"center"}
       flexDirection="column"
       px={"10%"}
-      // m={20}
-      // boxShadow="1px 1px 10px  #000"
+    // m={20}
+    // boxShadow="1px 1px 10px  #000"
     >
       <Button
         sx={{
@@ -170,7 +170,7 @@ const AccountReported = () => {
                     <img
                       src={row.profile}
                       width={"38px"}
-                      // onClick={() => navigate("/userProfile")}
+                    // onClick={() => navigate("/userProfile")}
                     />
                     <Typography ml={"10px"}>{`${row.creatorName}`}</Typography>
                   </Grid>

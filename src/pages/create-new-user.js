@@ -1,23 +1,10 @@
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Switch,
-  Box,
-  Typography,
-  TextField,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
+  Box, Button, FormControl,
+  InputLabel, MenuItem, Select, TextField
 } from "@mui/material";
 import React from "react";
 import {
-  createNewUser,
-  createpanaelLoginImage,
-  CustomerServicesImage,
+  createNewUser
 } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
 const CreateNewUser = () => {
@@ -33,7 +20,6 @@ const CreateNewUser = () => {
       <Box
         sx={{
           //   width: "cal(100% - 700px)",
-          bgcolor: "red",
           // boxShadow: "1px 1px 2px  #000",
           borderBottomLeftRadius: "50px",
           borderBottomRightRadius: "50px",
@@ -55,9 +41,10 @@ const CreateNewUser = () => {
           }}
         >
           <img
+            alt="pic here"
             src={createNewUser}
             width="280px"
-            // height="232px"
+          // height="232px"
           />
         </Box>
 
@@ -154,7 +141,7 @@ const CreateNewUser = () => {
                 py: 1,
               }}
             >
-              Crate
+              Create
             </Button>
           </Box>
         </Box>

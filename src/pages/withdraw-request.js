@@ -1,28 +1,12 @@
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Switch,
-  TextField,
-  Typography,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
+  Button, FormControl, Grid, MenuItem, Select, TextField,
+  Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
-  employedPortal,
-  empPic,
-  newestPic,
-  serviceImg,
-  withdrawPic,
+  withdrawPic
 } from "../assets/images";
-import DeleteIcon from "@mui/icons-material/Delete";
-import Tooltip from "@mui/material/Tooltip";
 const WithdrawRwquest = () => {
   const [age, setAge] = React.useState("");
   return (
@@ -64,6 +48,7 @@ const WithdrawRwquest = () => {
           }}
         >
           <img
+            alt="photosd here"
             src={withdrawPic}
             style={{
               height: "230px",
