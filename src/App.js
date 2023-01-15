@@ -3,23 +3,20 @@ import { Navigate, Route, Routes } from "react-router-dom";
 // import React from "react";
 import "./App.css";
 import PersistentDrawerLeft from "./components/drawer";
-import SignIn from "./pages/sigIn";
-import Setting from "./pages/setting";
-import ReportContent from "./pages/report-content";
-import UserProfile from "./pages/user-profile";
-import EmployeePortal from "./pages/employe-portal";
-import CreatePanel from "./pages/create-panel";
 import Accounting from "./pages/accounting";
-import CreatorEarning from "./pages/creator-earning";
-import FilterEarning from "./pages/filter-accounting";
-import CustomerServices from "./pages/customer-services";
-import CreateNewUser from "./pages/create-new-user";
-import NewestDetail from "./pages/newest-detail";
-import WithdrawRwquest from "./pages/withdraw-request";
 import UserData from "./pages/allUser";
-import EditProfile from "./pages/edit";
-import Detail from "./pages/detail";
 import Chat from "./pages/chat";
+import CreateNewUser from "./pages/create-new-user";
+import CreatePanel from "./pages/create-panel";
+import CustomerServices from "./pages/customer-services";
+import Detail from "./pages/detail";
+import EditProfile from "./pages/edit";
+import EmployeePortal from "./pages/employe-portal";
+import NewestDetail from "./pages/newest-detail";
+import ReportContent from "./pages/report-content";
+import SignIn from "./pages/sigIn";
+import UserProfile from "./pages/user-profile";
+import WithdrawRwquest from "./pages/withdraw-request";
 
 const routes = [
   {
@@ -93,6 +90,18 @@ const getRoutes = (allRoutes) =>
 
 function App() {
   return (
+    // <AllUser />
+    // <PersistentDrawerLeft routes={routes}>
+    //   <Routes>
+    //     {getRoutes(routes)}
+    //     <Route path="*" element={<Navigate to="/dashboard" />} />
+    //     <Route path="/userProfile" element={<UserProfile />} />
+    //   </Routes>
+    // </PersistentDrawerLeft>
+    // <Detail />
+    // <WithdrawRwquest />
+    // <CreatorEarning />
+    // <FilterEarning />
     <PersistentDrawerLeft routes={routes}>
       <Routes>
         {getRoutes(routes)}

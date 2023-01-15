@@ -28,9 +28,10 @@ const Detail = () => {
         Detail
       </Button>
       <Box
+
         sx={{
           mt: 4,
-          //   px:10,
+          // px: 10,
           width: "40%",
           bgcolor: "white",
           boxShadow: "1px 1px 5px  #000",
@@ -150,9 +151,9 @@ const Detail = () => {
           bgcolor: "white",
           width: "65vw",
           boxShadow: "1px 1px 5px  #000",
-          borderRadius: "35px",
+          borderRadius: "0 0 35px 35px",
           direction: "column",
-          px: 4,
+          // px: 4,
           pb: "10px",
           my: 3,
         }}
@@ -160,6 +161,10 @@ const Detail = () => {
         <Grid
           container
           sx={{
+            // width: "65vw",
+            // direction: "row",
+            // py: 1.6,
+            // mt: "15px",
             px: 2,
             width: "65vw",
             boxShadow: "1px 1px 5px  #000",
@@ -215,6 +220,7 @@ const Detail = () => {
               direction: "row",
               py: 1.6,
               mt: "15px",
+              px: 4,
             }}
           >
             <Grid container xs={2.4} textAlign={"center"}>
