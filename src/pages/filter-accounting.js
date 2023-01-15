@@ -3,15 +3,37 @@ import { Box } from "@mui/system";
 import React from "react";
 import { filterDashboardImage } from "../assets";
 import { filterProfile, newestPic, withdrawPic } from "../assets/images";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { isMobile } from "react-device-detect";
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+}));
 const FilterEarning = () => {
+  const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Box>
-      <Box container sx={{ display: "flex", direction: "row" }}>
+    <Box className={classes.root}>
+      <Box
+        container
+        sx={{
+          display: "flex",
+          direction: "row",
+          "& .xs": {
+            direction: "column",
+          },
+        }}
+      >
         <Box>
           <Box
             sx={{
               mt: 10,
-              mx: 8,
               borderRadius: "30px",
               display: "flex",
               bgcolor: "white",

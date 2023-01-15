@@ -22,6 +22,7 @@ const CreatorPanelLogin = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
+      mt={-3}
     >
       <Box
         sx={{

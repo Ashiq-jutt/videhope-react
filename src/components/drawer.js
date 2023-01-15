@@ -129,7 +129,7 @@ export default function PersistentDrawerLeft({ children, routes }) {
             )}
           </IconButton>
         </DrawerHeader>
-        <img src={logo} className={"logo"} />
+        <img src={logo} className={"logo"} style={{ height: "70px" }} />
         <Divider />
         <List style={{ flex: 1 }}>
           {routes?.map(

@@ -20,6 +20,9 @@ import UserData from "./pages/allUser";
 import EditProfile from "./pages/edit";
 import Detail from "./pages/detail";
 import Chat from "./pages/chat";
+import Earnings from "./pages/earnings";
+import CreatorPanelLogin from "./pages/creator-panel-login";
+import CustomerService from "./pages/customer-services";
 
 const routes = [
   {
@@ -33,42 +36,35 @@ const routes = [
   {
     type: "collapse",
     name: "Accounting",
-    key: "Accounting",
-    icon: "Accounting",
-    route: "/Accounting",
-    component: <Accounting />,
+    key: "FilterEarning",
+    icon: "accounting",
+    route: "/filterEarning",
+    component: <FilterEarning />,
   },
   {
     type: "collapse",
-    name: "CreatePortal",
-    key: "CreatePortal",
-    icon: "CreatePortal",
-    route: "/CreatePortal",
-    component: <CreatePanel />,
+    name: "Creators Panel",
+    key: "CreatorPanelLogin",
+    icon: "creator",
+    route: "/CreatorPanelLogin",
+    component: <CreatorPanelLogin />,
   },
-  {
-    type: "collapse",
-    name: "Reported content",
-    key: "reportedContent",
-    icon: "reportedContent",
-    route: "/reportedContent",
-    component: <ReportContent />,
-  },
+
   {
     type: "collapse",
     name: "Customer Service",
     key: "customerService",
     icon: "customerService",
     route: "/customerService",
-    component: <CustomerServices />,
+    component: <CustomerService />,
   },
   {
     type: "collapse",
-    name: "signout",
-    key: "signout",
-    icon: "logout",
-    route: "/signout",
-    component: <SignIn />,
+    name: "Employees Portal",
+    key: "EmployeePortal",
+    icon: "employeePortal",
+    route: "/employeePortal",
+    component: <EmployeePortal />,
   },
 ];
 const getRoutes = (allRoutes) =>
@@ -98,13 +94,17 @@ function App() {
         {getRoutes(routes)}
         <Route path="*" element={<Navigate to="/dashboard" />} />
         <Route path="/userProfile" element={<UserProfile />} />
+        <Route path="/creatorPanelLogin" element={<CreatorPanelLogin />} />
+        <Route path="/employeePortal" element={<EmployeePortal />} />
         <Route path="/allUsers" element={<UserData />} />
         <Route path="/createNewUser" element={<CreateNewUser />} />
         <Route path="/newestDetail" element={<NewestDetail />} />
         <Route path="/withdrawRwquest" element={<WithdrawRwquest />} />
+        <Route path="/earnings" element={<Earnings />} />
         <Route path="/editProfile" element={<EditProfile />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/filterEarning" element={<FilterEarning />} />
       </Routes>
     </PersistentDrawerLeft>
   );

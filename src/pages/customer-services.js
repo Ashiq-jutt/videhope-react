@@ -18,7 +18,7 @@ import {
   serviceImg,
 } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
-const CustomerServices = () => {
+const CustomerService = () => {
   const navigate = useNavigate();
   return (
     <Box
@@ -66,7 +66,7 @@ const CustomerServices = () => {
                   {item}
                 </Typography>
                 <Button
-                  onClick={() => navigate('/chat')}
+                  onClick={() => navigate("/chat")}
                   sx={{
                     bgcolor: "grey",
                     color: "white",
@@ -85,4 +85,4 @@ const CustomerServices = () => {
   );
 };
 
-export default CustomerServices;
+export default CustomerService;
