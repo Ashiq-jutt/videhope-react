@@ -100,7 +100,7 @@ export default function PersistentDrawerLeft({ children, routes }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" align="center">
-            Persistent drawer
+            Videhope
           </Typography>
         </Toolbar>
       </AppBar>

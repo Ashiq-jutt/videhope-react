@@ -19,21 +19,18 @@ const FilterEarning = () => {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box className={classes.root}>
+    <Box>
       <Box
         container
         sx={{
           display: "flex",
           direction: "row",
-          "& .xs": {
-            direction: "column",
-          },
         }}
       >
         <Box>
           <Box
             sx={{
-              mt: 10,
+              mt: "50px",
               borderRadius: "30px",
               display: "flex",
               bgcolor: "white",
@@ -41,19 +38,17 @@ const FilterEarning = () => {
               // alignItems: "center",
             }}
           >
-            <Box>
-              <img
-                src={filterDashboardImage}
-                style={{ width: "384px", height: "263px", borderRadius: 25 }}
-              />
-            </Box>
+            <img
+              src={filterDashboardImage}
+              style={{ width: "384px", height: "263px", borderRadius: 25 }}
+            />
           </Box>
           <Box
             sx={{
               flex: 1,
               direction: "column",
               width: "384px",
-              mx: 8,
+              mx: 1,
             }}
           >
             <Typography
@@ -144,30 +139,31 @@ const FilterEarning = () => {
           </Box>
         </Box>
         <Box>
-          <Typography sx={{ ml: 7, mt: 2, fontSize: "24px", color: "grey" }}>
+          <Typography sx={{ ml: 7, fontSize: "24px", color: "grey" }}>
             Daily
           </Typography>
           <Box
             sx={{
               bgcolor: "white",
-              width: "55vw",
+              width: "48vw",
               boxShadow: "1px 1px 5px  #000",
               borderRadius: "35px",
               direction: "column",
-              px: 4,
               my: 1,
-              mx: 4,
+              mx: 1,
             }}
           >
             <Grid
               container
               sx={{
-                width: "55vw",
+                width: "45vw",
                 boxShadow: "1px 1px 5px  #000",
-                borderRadius: "0px 0px 15px 15px ",
+                borderRadius: "0px 0px 15px 15px",
                 direction: "row",
-                py: "8px",
-                mt: "1px",
+                py: "12px",
+                // mt: 1,
+                bgcolor: "white",
+                mx: 3,
               }}
             >
               <Grid
@@ -199,36 +195,12 @@ const FilterEarning = () => {
               </Grid>
             </Grid>
 
-            {[
-              3,
-              3,
-              3,
-              3,
-              3,
-              2,
-              2,
-              2,
-              22,
-              ,
-              222,
-              2,
-              ,
-              2,
-              3,
-              3,
-              3,
-              3,
-              3,
-              33,
-              3,
-              3,
-              3,
-            ].map((item, index) => (
+            {[2, 3, 3, 3, 3, 3].map((item, index) => (
               <Grid
                 key={index}
                 container
                 sx={{
-                  width: "55vw",
+                  width: "48vw",
                   direction: "row",
                   py: 1.6,
                   // mt: "15px",
@@ -240,9 +212,9 @@ const FilterEarning = () => {
                       alt="Pic here"
                       src={withdrawPic}
                       style={{
-                        height: "87px",
-                        width: "84px",
-                        borderRadius: "100px",
+                        height: "80px",
+                        width: "70px",
+                        borderRadius: "1000px",
                       }}
                     />
                     <Typography>Ahmad</Typography>
@@ -269,9 +241,9 @@ const FilterEarning = () => {
                       alt="Pic here"
                       src={withdrawPic}
                       style={{
-                        height: "87px",
-                        width: "84px",
-                        borderRadius: "100px",
+                        height: "80px",
+                        width: "70px",
+                        borderRadius: "1000px",
                       }}
                     />
                     <Typography>Ahmad</Typography>
@@ -297,9 +269,9 @@ const FilterEarning = () => {
                       alt="Pic here"
                       src={withdrawPic}
                       style={{
-                        height: "87px",
-                        width: "84px",
-                        borderRadius: "100px",
+                        height: "80px",
+                        width: "70px",
+                        borderRadius: "1000px",
                       }}
                     />
                     <Typography>Ahmad</Typography>

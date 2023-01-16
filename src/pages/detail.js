@@ -1,11 +1,7 @@
-import {
-  Button, Grid, Typography
-} from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import {
-  newestPic
-} from "../assets/images";
+import { newestPic } from "../assets/images";
 const Detail = () => {
   return (
     <Box
@@ -22,7 +18,7 @@ const Detail = () => {
           width: "150px",
           height: "50px",
           borderRadius: "20px",
-          mt: -2,
+          mt: -4,
         }}
       >
         Detail
@@ -31,7 +27,7 @@ const Detail = () => {
         sx={{
           mt: 4,
           //   px:10,
-          width: "40%",
+          width: "50%",
           bgcolor: "white",
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "30px",
@@ -161,7 +157,7 @@ const Detail = () => {
           container
           sx={{
             px: 2,
-            width: "65vw",
+            width: "60vw",
             boxShadow: "1px 1px 5px  #000",
             borderRadius: "0px 0px 15px 15px ",
             // display: "flex",
