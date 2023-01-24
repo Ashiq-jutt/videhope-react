@@ -33,27 +33,31 @@ const CreatePanel = () => {
           //   width: "cal(100% - 700px)",
           boxShadow: "1px 1px 2px  #000",
           borderRadius: "50px",
-          px: '100px',
+          px: "100px",
           py: 3,
         }}
       >
         <img src={createPanel} width="275px" height="252px" />
       </Box>
       <Grid
-        // justifyContent={'center'}
+        justifyContent={"center"}
         sx={{
           my: 3,
           //   width: "cal(100% - 700px)",
           bgcolor: "white",
           display: "flex",
           flexWrap: "wrap",
-          p: 1,
-          // px: '50px'
-          width: '60%',
-          //   bgcolor: "red",
+          width: "70vw",
         }}
       >
-        {[1, 9, 0, 3, 0, 0].map(() => (
+        {[
+          { item: "Unapproved", total: 35 },
+          { item: "Most Subscribed", total: 20 },
+          { item: "Verified", total: 25 },
+          { item: "Denied", total: 12 },
+          { item: "Most Followed", total: 80 },
+          { item: "All Creators", total: 100 },
+        ].map((item, index) => (
           <Box m={2}>
             <Box
               sx={{
@@ -63,16 +67,21 @@ const CreatePanel = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                width: "180px",
+                width: "17vw",
                 bgcolor: "white",
               }}
             >
-              <Typography ml={1}>Unapproved</Typography>
+              <Typography ml={1}>{item.item}</Typography>
               <Button
-                onClick={() => navigate('/newestDetail')}
-                sx={{ bgcolor: "blue", color: "white", borderRadius: "10px" }}
+                onClick={() => navigate("/newest")}
+                sx={{
+                  bgcolor: "blue",
+                  py: "13px",
+                  color: "white",
+                  borderRadius: "10px",
+                }}
               >
-                12
+                {item.total}
               </Button>
             </Box>
           </Box>

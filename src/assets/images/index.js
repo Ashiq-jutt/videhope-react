@@ -1,5 +1,6 @@
 export { default as serviceImg } from "./service-img.png";
 export { default as repoeredImg } from "./reported-img.png";
+export { default as reportedImg } from "./reported-img.png";
 export { default as employedPortal } from "./employed-portal.png";
 export { default as empPic } from "./emp-pic.png";
 export { default as newestPic } from "./newest-pic.png";
@@ -14,3 +15,4 @@ export { default as creatorImage } from "./creator-image.png";
 export { default as withdrawPic } from "./withdraw-pic.png";
 export { default as creatorEarning } from "./creator-earning.png";
 export { default as filterProfile } from "./filter-profile.png";
+export { default as creatorImg } from "./creatorimg.png";

@@ -23,6 +23,11 @@ import Chat from "./pages/chat";
 import Earnings from "./pages/earnings";
 import CreatorPanelLogin from "./pages/creator-panel-login";
 import CustomerService from "./pages/customer-services";
+import Newest from "./pages/newest";
+import CustomerLogin from "./pages/cutomer-ligin";
+import ContentReport from "./pages/content-report";
+import AccountReported from "./pages/account-reported";
+import Subscription from "./pages/subscription";
 
 const routes = [
   {
@@ -38,15 +43,15 @@ const routes = [
     name: "Accounting",
     key: "FilterEarning",
     icon: "accounting",
-    route: "/filterEarning",
-    component: <FilterEarning />,
+    route: "/accounting",
+    component: <Accounting />,
   },
   {
     type: "collapse",
     name: "Creators Panel",
     key: "CreatorPanelLogin",
     icon: "creator",
-    route: "/CreatorPanelLogin",
+    route: "/creatorPanelLogin",
     component: <CreatorPanelLogin />,
   },
 
@@ -55,8 +60,8 @@ const routes = [
     name: "Customer Service",
     key: "customerService",
     icon: "customerService",
-    route: "/customerService",
-    component: <CustomerService />,
+    route: "/customerLogin",
+    component: <CustomerLogin />,
   },
   {
     type: "collapse",
@@ -105,6 +110,15 @@ function App() {
         <Route path="/detail" element={<Detail />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/filterEarning" element={<FilterEarning />} />
+        <Route path="/accounting" element={<Accounting />} />
+        <Route path="/creatorEarning" element={<CreatorEarning />} />
+        <Route path="/createPanel" element={<CreatePanel />} />
+        <Route path="/newest" element={<Newest />} />
+        <Route path="/customerLogin" element={<CustomerLogin />} />
+        <Route path="/customerService" element={<CustomerService />} />
+        <Route path="/contentReport" element={<ContentReport />} />
+        <Route path="/accountReported" element={<AccountReported />} />
+        <Route path="/subscription" element={<Subscription />} />
       </Routes>
     </PersistentDrawerLeft>
   );

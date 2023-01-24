@@ -6,6 +6,8 @@ import { filterProfile, newestPic, withdrawPic } from "../assets/images";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { isMobile } from "react-device-detect";
+
+import { useNavigate } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down("sm")]: {
@@ -13,13 +15,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 const FilterEarning = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box>
+    <Box sx={{ display: { xs: "block", sm: "block", xl: "block" } }}>
       <Box
         container
         sx={{
@@ -220,9 +224,11 @@ const FilterEarning = () => {
                     <Typography>Ahmad</Typography>
                   </Box>
                   <Button
+                    onClick={() => navigate("/withdrawRwquest")}
                     sx={{
-                      textTransform: "none",
-                      bgcolor: "#e2e2e2 ",
+                      // textTransform: "none",
+                      bgcolor: "blue",
+                      // bgcolor: "#e2e2e2 ",
                       color: "white",
                       // boxShadow: "2px 2px 4px  #000",
                       borderRadius: "50px",
@@ -301,3 +307,25 @@ const FilterEarning = () => {
 };
 
 export default FilterEarning;
+// import { Grid } from "@material-ui/core";
+
+// const FilterEarning = () => {
+//   return (
+//     <Grid container spacing={3}>
+//       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+//         <div>Item 1</div>
+//       </Grid>
+//       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+//         <div>Item 2</div>
+//       </Grid>
+//       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+//         <div>Item 3</div>
+//       </Grid>
+//       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+//         <div>Item 3</div>
+//       </Grid>
+
+//     </Grid>
+//   );
+// };
+// export default FilterEarning;

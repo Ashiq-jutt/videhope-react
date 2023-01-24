@@ -13,15 +13,17 @@ import {
 } from "@mui/material";
 import React from "react";
 import { accountingImage } from "../assets/images";
-// import Masonry from "@mui/lab/Masonry";
+import { useNavigate } from "react-router-dom";
+
 const Accounting = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
-      mt={'-40px'}
+      mt={"-40px"}
     >
       <Box
         sx={{
@@ -39,20 +41,21 @@ const Accounting = () => {
         <Box
           mb={1.5}
           sx={{
-            px: '100px',
+            px: "12vw",
             //   width: "cal(100% - 700px)",
             bgcolor: "white",
             boxShadow: "2px 2px 4px  #000",
-            borderBottomLeftRadius: "80px",
-            borderBottomRightRadius: "80px",
+            borderRadius: "0px 0px 80px 80px",
+            // borderBottomRightRadius: "80px",
             // pt: 2,
-            pb: 3,
+            py: 5,
           }}
         >
           <img src={accountingImage} width="220px" height="232px" />
         </Box>
 
         <Button
+          onClick={() => navigate("/subscription")}
           sx={{
             bgcolor: "white",
             color: "grey",
@@ -67,6 +70,7 @@ const Accounting = () => {
         </Button>
 
         <Button
+          onClick={() => navigate("/filterEarning")}
           sx={{
             bgcolor: "white",
             color: "grey",
@@ -80,6 +84,7 @@ const Accounting = () => {
           Widthraw Request
         </Button>
         <Button
+          onClick={() => navigate("/creatorEarning")}
           sx={{
             bgcolor: "white",
             color: "grey",
@@ -93,6 +98,7 @@ const Accounting = () => {
           Creator Earnings
         </Button>
         <Button
+          onClick={() => navigate("/earnings")}
           sx={{
             bgcolor: "white",
             color: "grey",

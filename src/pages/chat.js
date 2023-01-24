@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) =>
       display: "flex",
       alignItems: "center",
       flexDirection: "column",
-      position: "relative"
+      position: "relative",
     },
     paper2: {
       width: "80vw",
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) =>
       display: "flex",
       alignItems: "center",
       flexDirection: "column",
-      position: "relative"
+      position: "relative",
     },
     container: {
       width: "100%",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) =>
       margin: 10,
       overflowY: "scroll",
       height: "calc( 100% - 80px )",
-    }
+    },
   })
 );
 
@@ -47,9 +47,8 @@ export default function App() {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      <Box className={classes.paper}>
-      </Box>
-      {/* <Paper className={classes.paper} zDepth={2}>
+      <Box className={classes.paper}></Box>
+      <Paper className={classes.paper} zDepth={2}>
         <Paper id="style-1" className={classes.messagesBody}>
           <MessageLeft
             message="あめんぼあかいなあいうえお"
@@ -109,7 +108,7 @@ export default function App() {
           />
         </Paper>
         <TextInput />
-      </Paper> */}
+      </Paper>
     </Box>
   );
 }

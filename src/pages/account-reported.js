@@ -109,8 +109,8 @@ const AccountReported = () => {
       alignItems={"center"}
       flexDirection="column"
       px={"10%"}
-    // m={20}
-    // boxShadow="1px 1px 10px  #000"
+      // m={20}
+      // boxShadow="1px 1px 10px  #000"
     >
       <Button
         sx={{
@@ -121,7 +121,7 @@ const AccountReported = () => {
           height: "40px",
           borderBottomLeftRadius: "20px",
           borderBottomRightRadius: "20px",
-          mt: -1 / 2,
+          mt: -3,
         }}
       >
         Account Reported
@@ -129,15 +129,15 @@ const AccountReported = () => {
       <Box
         sx={{
           //   width: "cal(100% - 700px)",
-          boxShadow: "2px 4px 6px  #000",
-          // borderRadius: "30px",
-          my: 3,
-          pr: 8,
+          boxShadow: "1px 2px 5px  #000",
+          borderRadius: "20px",
+          mt: 3,
+          pr: 4,
           display: "flex",
           // bgcolor: "red",
           bgcolor: "white",
           flexDirection: "column",
-          width: "100%",
+          width: "78vw",
         }}
         justifycreatorName={"center"}
         alignItems={"center"}
@@ -170,7 +170,7 @@ const AccountReported = () => {
                     <img
                       src={row.profile}
                       width={"38px"}
-                    // onClick={() => navigate("/userProfile")}
+                      // onClick={() => navigate("/userProfile")}
                     />
                     <Typography ml={"10px"}>{`${row.creatorName}`}</Typography>
                   </Grid>

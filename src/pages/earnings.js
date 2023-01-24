@@ -7,23 +7,12 @@ import { Graph } from "./graph";
 function Earnings() {
   return (
     <Container>
-      <h2>Earnings</h2>
-      <Grid
-        container
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        {[0, 1, 2].map((item, index) => (
-          <EarningCard />
-        ))}
-      </Grid>
       <Box
         sx={{
           backgroundColor: "#F4F4F4",
-          padding: "15px",
+          padding: "10px",
           width: 1150,
-          marginTop: "54px",
+          marginTop: "10px",
           borderRadius: "12px",
         }}
       >

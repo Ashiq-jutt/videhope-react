@@ -15,7 +15,11 @@ import {
   CustomerServicesImage,
 } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
+import { useNavigate } from "react-router-dom";
+
 const CreatorPanelLogin = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       display={"flex"}
@@ -98,6 +102,7 @@ const CreatorPanelLogin = () => {
             />
           </Box>
           <Button
+            onClick={() => navigate("/createPanel")}
             sx={{
               bgcolor: "blue",
               color: "white",

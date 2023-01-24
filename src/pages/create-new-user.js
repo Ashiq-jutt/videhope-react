@@ -1,13 +1,18 @@
 import {
-  Box, Button, FormControl,
-  InputLabel, MenuItem, Select, TextField
+  Box,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
 } from "@mui/material";
 import React from "react";
-import {
-  createNewUser
-} from "../assets/images";
+import { useNavigate } from "react-router-dom";
+import { createNewUser } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
 const CreateNewUser = () => {
+  const navigate = useNavigate();
   const [age, setAge] = React.useState("");
 
   return (
@@ -44,7 +49,7 @@ const CreateNewUser = () => {
             alt="pic here"
             src={createNewUser}
             width="280px"
-          // height="232px"
+            // height="232px"
           />
         </Box>
 
@@ -133,6 +138,7 @@ const CreateNewUser = () => {
           </Box>
           <Box ml={3}>
             <Button
+              onClick={() => navigate("/employeePortal")}
               sx={{
                 bgcolor: "blue",
                 color: "white",

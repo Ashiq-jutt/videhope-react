@@ -12,7 +12,11 @@ import {
 import React from "react";
 import { CustomerServicesImage } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
+import { useNavigate } from "react-router-dom";
+
 const CustomerLogin = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       display={"flex"}
@@ -94,6 +98,7 @@ const CustomerLogin = () => {
             />
           </Box>
           <Button
+            onClick={() => navigate("/customerService")}
             sx={{
               bgcolor: "blue",
               color: "white",

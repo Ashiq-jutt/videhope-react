@@ -9,13 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import {
-  employedPortal,
-  empPic,
-  newestPic,
-  repoeredImg,
-  serviceImg,
-} from "../assets/images";
+import { reportedImg } from "../assets/images";
 // import Masonry from "@mui/lab/Masonry";
 const ContentReport = () => {
   const [checked, setChecked] = React.useState(true);
@@ -43,7 +37,7 @@ const ContentReport = () => {
           height: "50px",
           borderBottomLeftRadius: "20px",
           borderBottomRightRadius: "20px",
-          mt: -0.9,
+          mt: -3,
           mr: 120,
         }}
       >
@@ -53,25 +47,22 @@ const ContentReport = () => {
         container
         sx={{
           my: 3,
-          //   width: "1150px",
           bgcolor: "white",
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "30px",
           display: "flex",
           flexWrap: "wrap",
-          mx: 10,
-          p: 1,
         }}
       >
-        {[1, 2, 3, 3, 3].map((item, index) => (
-          <Grid m={3}>
+        {[1, 2, 3, 3, 3, 3, 3].map((item, index) => (
+          <Grid p={3.5}>
             <Box
               style={{
-                width: "235px",
+                width: "14vw",
                 display: "flex",
-                height: "320px",
+                height: "22vw",
                 justifyContent: "center",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 alignItems: "center",
                 boxShadow: "1px 1px 7px  #000",
                 flexDirection: "column",
@@ -95,7 +86,7 @@ const ContentReport = () => {
                   @jacob
                 </Typography>
                 <img
-                  src={repoeredImg}
+                  src={reportedImg}
                   style={{ height: 170, width: 170, borderRadius: "30px" }}
                 />
                 <Button

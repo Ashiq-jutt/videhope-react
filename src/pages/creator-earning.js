@@ -2,10 +2,13 @@ import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { creatorEarning } from "../assets/images";
+import { useNavigate } from "react-router-dom";
 const CreatorEarning = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Button
+        onClick={() => navigate("/accounting")}
         sx={{
           variant: "outlined",
           color: "black",
@@ -13,7 +16,7 @@ const CreatorEarning = () => {
           width: "200px",
           height: "50px",
           borderRadius: "5px 5px 20px 20px",
-          mt: -1,
+          mt: -4,
           ml: 8,
         }}
       >
@@ -132,7 +135,7 @@ const CreatorEarning = () => {
         <Box
           sx={{
             bgcolor: "white",
-            width: "55vw",
+            width: "42vw",
             boxShadow: "1px 1px 5px  #000",
             borderRadius: "35px",
             direction: "column",
@@ -146,7 +149,7 @@ const CreatorEarning = () => {
             container
             sx={{
               px: 2,
-              width: "55vw",
+              width: "37vw",
               boxShadow: "1px 1px 5px  #000",
               borderRadius: "0px 0px 15px 15px ",
               // display: "flex",
@@ -169,36 +172,12 @@ const CreatorEarning = () => {
           {/* <Grid container xs={12}>
           Dec6
         </Grid> */}
-          {[
-            3,
-            3,
-            3,
-            3,
-            3,
-            2,
-            2,
-            2,
-            22,
-            ,
-            222,
-            2,
-            ,
-            2,
-            3,
-            3,
-            3,
-            3,
-            3,
-            33,
-            3,
-            3,
-            3,
-          ].map((item, index) => (
+          {[, 222, 2, , 2, 3, 3, 3, 3, 3, 33, 3, 3, 3].map((item, index) => (
             <Grid
               key={index}
               container
               sx={{
-                width: "55vw",
+                width: "37vw",
                 direction: "row",
                 py: 1.6,
                 // mt: "15px",
@@ -207,7 +186,6 @@ const CreatorEarning = () => {
               <Grid container justifyContent={"center"} xs={4}>
                 Ahmad
               </Grid>
-
               <Grid container justifyContent={"center"} xs={4}>
                 20$
               </Grid>

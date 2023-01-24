@@ -1,13 +1,20 @@
 import {
-  Button, FormControl, Grid, MenuItem, Select, TextField,
-  Typography
+  Button,
+  FormControl,
+  Grid,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import {
-  withdrawPic
-} from "../assets/images";
+import { withdrawPic } from "../assets/images";
+import { useNavigate } from "react-router-dom";
+
 const WithdrawRwquest = () => {
+  const navigate = useNavigate();
+
   const [age, setAge] = React.useState("");
   return (
     <Box
@@ -24,7 +31,7 @@ const WithdrawRwquest = () => {
           width: "200px",
           height: "50px",
           borderRadius: "5px 5px 20px 20px",
-          mt: -1,
+          mt: -4,
         }}
       >
         Withdraw Request
@@ -32,7 +39,7 @@ const WithdrawRwquest = () => {
       <Box
         sx={{
           mt: 4,
-          width: "35%",
+          width: "37vw",
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "30px",
           display: "flex",
@@ -51,8 +58,8 @@ const WithdrawRwquest = () => {
             alt="photosd here"
             src={withdrawPic}
             style={{
-              height: "230px",
-              width: "230px",
+              height: "180px",
+              width: "180px",
               borderRadius: "1000px",
             }}
           />
@@ -62,21 +69,19 @@ const WithdrawRwquest = () => {
             flex: 1,
           }}
         >
-          <Grid container mt={3} justifyContent={"flex-end"} ml={2}>
+          <Grid container mt={3} justifyContent={"flex-end"}>
             <Typography
               borderRadius={"30px 0px 0px 30px"}
               bgcolor={"blue"}
               color={"white"}
-              // py={2}
               px={1}
-              ml={-4}
-              mr={2}
+              // mr={}
               fontSize={36}
             >
               100$
             </Typography>
           </Grid>
-          <Typography fontSize={"34px"} color={"grey"}>
+          <Typography fontSize={"34px"} mt={-2} color={"grey"}>
             Ahmad
           </Typography>
           <Typography fontSize={"12px"} mt={-1} color={"grey"}>
@@ -85,7 +90,7 @@ const WithdrawRwquest = () => {
           <Box mt={2}>
             <FormControl
               sx={{
-                minWidth: "223px",
+                minWidth: "210px",
                 color: "white",
                 bgcolor: "blue",
                 borderRadius: "20px",
@@ -109,7 +114,7 @@ const WithdrawRwquest = () => {
       <Box
         component="form"
         sx={{
-          "& > :not(style)": { width: "42ch", my: 4 },
+          "& > :not(style)": { width: "42ch", my: 3 },
         }}
         noValidate
         autoComplete="off"
@@ -121,9 +126,10 @@ const WithdrawRwquest = () => {
           autoComplete="off"
         />
       </Box>
-      <Box
+      <Button
+        onClick={() => navigate("/filterEarning")}
         sx={{
-          // variant: "outlined",
+          variant: "outlined",
           bgcolor: "blue",
           color: "white",
           width: "270px",
@@ -131,11 +137,11 @@ const WithdrawRwquest = () => {
           borderRadius: "20px",
           mb: 1,
           textAlign: "center",
-          mt: 4,
+          mt: 3,
         }}
       >
         Done
-      </Box>
+      </Button>
     </Box>
   );
 };
