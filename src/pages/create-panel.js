@@ -33,21 +33,25 @@ const CreatePanel = () => {
           //   width: "cal(100% - 700px)",
           boxShadow: "1px 1px 2px  #000",
           borderRadius: "50px",
-          px: "100px",
+          px: { sm: "100px", xs: '5px' },
+          background: { xs: 'red', sm: 'none ' },
           py: 3,
         }}
       >
-        <img src={createPanel} width="275px" height="252px" />
+        <img src={createPanel} width={{ sm: "275px", xs: '100px' }}
+          height={{ sm: "252px", xs: '110px' }} />
       </Box>
       <Grid
-        justifyContent={"center"}
         sx={{
           my: 3,
           //   width: "cal(100% - 700px)",
           bgcolor: "white",
           display: "flex",
           flexWrap: "wrap",
+          flexDirection: { xs: 'column', sm: 'row' },
           width: "70vw",
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         {[
@@ -58,7 +62,7 @@ const CreatePanel = () => {
           { item: "Most Followed", total: 80 },
           { item: "All Creators", total: 100 },
         ].map((item, index) => (
-          <Box m={2}>
+          <Box m={2} flexDirection='column'>
             <Box
               sx={{
                 //   width: "cal(100% - 700px)",
@@ -67,7 +71,7 @@ const CreatePanel = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                width: "17vw",
+                width: { md: "20vw", xs: '70vw' },
                 bgcolor: "white",
               }}
             >

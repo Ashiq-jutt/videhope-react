@@ -26,12 +26,11 @@ const CreatorPanelLogin = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
-      mt={-3}
+      mt={-5}
     >
       <Box
         sx={{
           //   width: "cal(100% - 700px)",
-          bgcolor: "white",
           boxShadow: "1px 1px 2px  #000",
           borderBottomLeftRadius: "50px",
           borderBottomRightRadius: "50px",
@@ -46,9 +45,9 @@ const CreatorPanelLogin = () => {
         <Box
           mb={1.5}
           sx={{
-            px: 14,
+            px: { sm: 14, xs: 3 },
             //   width: "cal(100% - 700px)",
-            bgcolor: "white",
+            // bgcolor: "green",
             boxShadow: "1px 1px 2px  #000",
             borderBottomLeftRadius: "40px",
             borderBottomRightRadius: "40px",
@@ -73,7 +72,7 @@ const CreatorPanelLogin = () => {
           <Box
             component="form"
             sx={{
-              "& > :not(style)": { width: "30ch" },
+              "& > :not(style)": { width: { sm: "30ch", xs: 'auto' }, },
             }}
             noValidate
             autoComplete="off"
@@ -88,7 +87,7 @@ const CreatorPanelLogin = () => {
           <Box
             component="form"
             sx={{
-              "& > :not(style)": { width: "30ch" },
+              "& > :not(style)": { width: { sm: "30ch", xs: 'auto' }, },
             }}
             noValidate
             autoComplete="off"
@@ -107,8 +106,9 @@ const CreatorPanelLogin = () => {
               bgcolor: "blue",
               color: "white",
               borderRadius: "50px",
-              px: 12,
+              px: { sm: 12, xs: 8 },
               py: 1,
+              textTransform: 'capitalize',
             }}
           >
             Login

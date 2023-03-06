@@ -105,6 +105,7 @@ const CustomerLogin = () => {
               borderRadius: "50px",
               px: 12,
               py: 1,
+              textTransform: 'capitalize',
             }}
           >
             Login
