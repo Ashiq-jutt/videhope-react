@@ -21,25 +21,24 @@ const NewestDetail = () => {
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
-      container
-      direction={"row"}
     >
       <Box>
         <Box
-          container
           sx={{
             mt: 4,
-            height: "250px",
-            width: "470px",
+            height: { sm: "250px", xs: '500px' },
+            width: { sm: "470px", xs: '235px' },
             bgcolor: "white",
             boxShadow: "1px 1px 5px  #000",
             borderRadius: "50px",
-            display: "flex",
+            display: { sm: "flex", xs: 'block' },
+
           }}
         >
           <Grid
             sx={{
-              // height: "250px",
+              height: "250px",
+              // bgcolor: "white",
               width: "235px",
             }}
           >
@@ -47,8 +46,8 @@ const NewestDetail = () => {
               alt={"photoo here"}
               src={newestPic}
               style={{
-                height: "220px",
-                width: "220px",
+                height: { sm: "220px", xs: '170px' },
+                width: { sm: "220px", xs: '170px' },
                 borderRadius: "100px",
               }}
             />
@@ -59,6 +58,7 @@ const NewestDetail = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+
             }}
           >
             <Box>
@@ -117,13 +117,14 @@ const NewestDetail = () => {
             sx={{
               variant: "outlined",
               color: "white",
-              width: "16vw",
+              width: { sm: "12vw", xs: '30vw' },
               height: "30px",
               borderRadius: "20px",
               bgcolor: "blue",
               mt: 3,
               mb: 1,
-              ml: 15,
+              ml: 18,
+              textTransform: 'capitalize',
             }}
           >
             Done

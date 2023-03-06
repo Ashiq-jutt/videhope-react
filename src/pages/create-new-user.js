@@ -49,7 +49,7 @@ const CreateNewUser = () => {
             alt="pic here"
             src={createNewUser}
             width="280px"
-            // height="232px"
+          // height="232px"
           />
         </Box>
 
@@ -145,6 +145,7 @@ const CreateNewUser = () => {
                 borderRadius: "50px",
                 px: 12,
                 py: 1,
+                textTransform: 'capitalize',
               }}
             >
               Create

@@ -31,16 +31,17 @@ const Newest = () => {
         borderRadius: "30px",
         display: "flex",
         flexWrap: "wrap",
-        justifyContent: "center",
+        justifyContent: { xs: "center", sm: 'inherit' },
         alignItems: "center",
-        mx: { sm: 10, xs: '0px' },
-        p: '12px',
+        mx: { sm: 10, xs: '1px' },
+        p: { sm: '16px', xs: '4px' },
+        // m: 12,
       }}
     >
       {/* <Typography textAlign={"center"}>Newest</Typography> */}
       {[1, 2, 3, 3, 4, 3, 4, 4].map(
         (item, index) => (
-          <Grid m='6px'>
+          <Grid mx={{ sm: '20px', xs: '4px' }} my='8px'>
             <Box
               sx={{
                 display: "flex",
@@ -48,12 +49,12 @@ const Newest = () => {
                 alignItems: "center",
               }}
             >
-              <Box mr={"5px"}>
+              <Box mr={"10px"}>
                 <img
                   src={creatorImg}
                   style={{
-                    height: { xs: 190, sm: 90 },
-                    width: { xs: 190, sm: 90 },
+                    height: { sm: 60, xs: 210, },
+                    width: { sm: 60, xs: 210, },
                     borderRadius: "33px",
                   }}
                 />

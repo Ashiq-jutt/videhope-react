@@ -34,7 +34,7 @@ const CreatePanel = () => {
           boxShadow: "1px 1px 2px  #000",
           borderRadius: "50px",
           px: { sm: "100px", xs: '5px' },
-          background: { xs: 'red', sm: 'none ' },
+          // background: { xs: 'red', sm: 'none ' },
           py: 3,
         }}
       >
