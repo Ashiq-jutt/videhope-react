@@ -121,8 +121,9 @@ const NewestDetail = () => {
               height: "30px",
               borderRadius: "20px",
               bgcolor: "blue",
-              mt: 1,
+              mt: 3,
               mb: 1,
+              ml: 15,
             }}
           >
             Done

@@ -33,6 +33,7 @@ const EditProfile = () => {
           width: "150px",
           height: "50px",
           borderRadius: "20px",
+          textTransform: 'capitalize',
           mt: -2,
         }}
       >

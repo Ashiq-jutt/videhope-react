@@ -3,16 +3,12 @@ import { Navigate, Route, Routes } from "react-router-dom";
 // import React from "react";
 import "./App.css";
 import PersistentDrawerLeft from "./components/drawer";
-import SignIn from "./pages/sigIn";
-import Setting from "./pages/setting";
-import ReportContent from "./pages/report-content";
 import UserProfile from "./pages/user-profile";
 import EmployeePortal from "./pages/employe-portal";
 import CreatePanel from "./pages/create-panel";
 import Accounting from "./pages/accounting";
 import CreatorEarning from "./pages/creator-earning";
 import FilterEarning from "./pages/filter-accounting";
-import CustomerServices from "./pages/customer-services";
 import CreateNewUser from "./pages/create-new-user";
 import NewestDetail from "./pages/newest-detail";
 import WithdrawRwquest from "./pages/withdraw-request";
@@ -97,7 +93,7 @@ function App() {
     <PersistentDrawerLeft routes={routes}>
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="*" element={<EmployeePortal />} />
         <Route path="/userProfile" element={<UserProfile />} />
         <Route path="/creatorPanelLogin" element={<CreatorPanelLogin />} />
         <Route path="/employeePortal" element={<EmployeePortal />} />

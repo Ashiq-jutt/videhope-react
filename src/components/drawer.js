@@ -87,8 +87,8 @@ export default function PersistentDrawerLeft({ children, routes }) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline backgroundColor="#0e1a2e" />
-      <AppBar position="fixed" open={open} backgroundColor={"red"}>
+      {/* <CssBaseline backgroundColor="#0e1a2e" /> */}
+      <AppBar open={open} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -129,7 +129,12 @@ export default function PersistentDrawerLeft({ children, routes }) {
             )}
           </IconButton>
         </DrawerHeader>
-        <img src={logo} className={"logo"} style={{ height: "70px" }} />
+        <img
+          src={logo}
+          alt={" image hare"}
+          className={"logo"}
+          style={{ height: "70px" }}
+        />
         <Divider />
         <List style={{ flex: 1 }}>
           {routes?.map(
