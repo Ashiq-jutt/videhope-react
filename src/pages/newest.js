@@ -26,38 +26,36 @@ const Newest = () => {
   return (
     <Box
       sx={{
-        // mt: 3,
-        //   width: "cal(100% - 700px)",
         bgcolor: "white",
         boxShadow: "1px 1px 5px  #000",
         borderRadius: "30px",
         display: "flex",
         flexWrap: "wrap",
-        // justifyContent: "center",
-        // alignItems: "center",
-        mx: 10,
-        p: 2,
+        justifyContent: { xs: "center", sm: 'inherit' },
+        alignItems: "center",
+        mx: { sm: 10, xs: '1px' },
+        p: { sm: '16px', xs: '4px' },
+        // m: 12,
       }}
     >
       {/* <Typography textAlign={"center"}>Newest</Typography> */}
-      {[1, 2, 3, 3, 4, 3, 4, 4, 4, 4, 4, 4, 4, 4, , 4, 44, 4, 4, ,].map(
+      {[1, 2, 3, 3, 4, 3, 4, 4].map(
         (item, index) => (
-          <Grid m={2} justifyContent="center">
+          <Grid mx={{ sm: '20px', xs: '4px' }} my='8px'>
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                // spacing: 4,
                 alignItems: "center",
               }}
             >
-              <Box mr={"5px"}>
+              <Box mr={"10px"}>
                 <img
                   src={creatorImg}
                   style={{
-                    height: 70,
-                    width: 70,
-                    borderRadius: "25px",
+                    height: { sm: 60, xs: 210, },
+                    width: { sm: 60, xs: 210, },
+                    borderRadius: "33px",
                   }}
                 />
               </Box>
@@ -74,6 +72,7 @@ const Newest = () => {
                     bgcolor: "blue",
                     mt: 1,
                     mb: 1,
+                    textTransform: 'capitalize',
                   }}
                 >
                   Detail
