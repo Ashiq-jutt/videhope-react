@@ -18,10 +18,11 @@ const WithdrawRwquest = () => {
   const [age, setAge] = React.useState("");
   return (
     <Box
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
       flexDirection="column"
+    // bgcolor='red'
     >
       <Button
         sx={{
@@ -32,6 +33,7 @@ const WithdrawRwquest = () => {
           height: "50px",
           borderRadius: "5px 5px 20px 20px",
           mt: -4,
+          textTransform: 'none',
         }}
       >
         Withdraw Request
@@ -39,60 +41,58 @@ const WithdrawRwquest = () => {
       <Box
         sx={{
           mt: 4,
-          width: "37vw",
+          width: { sm: "37%", xs: '100%' },
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "30px",
           display: "flex",
           flex: 1,
+          // background: 'green'
         }}
       >
+
         <Box
+          component="img"
           sx={{
+            height: { sm: 180, xs: 130 },
+            width: { sm: 180, xs: 130 },
             flex: 1,
-            p: 1,
             justifyContent: "center",
             alignItems: "center",
+            borderRadius: '50%',
+            // background: { sm: "red", xs: 'green', },
           }}
-        >
-          <img
-            alt="photosd here"
-            src={withdrawPic}
-            style={{
-              height: "180px",
-              width: "180px",
-              borderRadius: "1000px",
-            }}
-          />
-        </Box>
+          alt="photosd here"
+          src={withdrawPic}
+        />
         <Box
           sx={{
             flex: 1,
           }}
         >
-          <Grid container mt={3} justifyContent={"flex-end"}>
+          <Grid container my={{ sm: 3, xs: 2 }} justifyContent='end' >
             <Typography
               borderRadius={"30px 0px 0px 30px"}
               bgcolor={"blue"}
               color={"white"}
-              px={1}
+              px={{ sm: 1, xs: 1 }}
               // mr={}
-              fontSize={36}
+              fontSize={{ sm: 36, xs: 18 }}
             >
               100$
             </Typography>
           </Grid>
-          <Typography fontSize={"34px"} mt={-2} color={"grey"}>
+          <Typography fontSize={{ sm: "34px", xs: '24px' }} ml={1} mt={-3} color={"grey"}>
             Ahmad
           </Typography>
-          <Typography fontSize={"12px"} mt={-1} color={"grey"}>
+          <Typography fontSize={{ sm: "14px", xs: '10px' }} ml={1} mt={-1} color={"grey"}>
             ahmadworkspace@gmail.com
           </Typography>
-          <Box mt={2}>
+          <Box my={1}>
             <FormControl
               sx={{
-                minWidth: "210px",
+                minWidth: { sm: "210px", xs: '150px' },
                 color: "white",
-                bgcolor: "blue",
+                // bgcolor: "blue",
                 borderRadius: "20px",
               }}
               size={"small"}
@@ -114,7 +114,7 @@ const WithdrawRwquest = () => {
       <Box
         component="form"
         sx={{
-          "& > :not(style)": { width: "42ch", my: 3 },
+          "& > :not(style)": { width: { sm: "42ch", xs: "30ch" }, my: 3 },
         }}
         noValidate
         autoComplete="off"
@@ -132,7 +132,7 @@ const WithdrawRwquest = () => {
           variant: "outlined",
           bgcolor: "blue",
           color: "white",
-          width: "270px",
+          width: { sm: "270px", xs: '200px' },
           height: "35px",
           borderRadius: "20px",
           mb: 1,
