@@ -23,6 +23,7 @@ const CustomerLogin = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
+  
     >
       <Box
         sx={{

@@ -26,6 +26,7 @@ const CustomerService = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection="column"
+    
     >
       <Box
         sx={{
@@ -37,12 +38,13 @@ const CustomerService = () => {
           display: "flex",
           p: 4,
           flexDirection: "column",
+          
         }}
         justifyContent={"center"}
         alignItems={"center"}
       >
         <Box mb={7}>
-          <img src={customerServices} width="420px" height="132px" mb={5} />
+          <img src={customerServices} height="132px" mb={5} sx={{width:{xs:'200px',sm:'420'}}} />
         </Box>
 
         {[

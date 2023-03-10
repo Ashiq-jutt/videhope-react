@@ -1,13 +1,7 @@
-import {
-  Button, Grid,
-  Switch,
-  Typography
-} from "@mui/material";
+import { Button, Grid, Switch, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import {
-  newestPic
-} from "../assets/images";
+import { newestPic } from "../assets/images";
 const EditProfile = () => {
   const [checked, setChecked] = React.useState(true);
   const [checked1, setChecked1] = React.useState(true);
@@ -33,7 +27,7 @@ const EditProfile = () => {
           width: "150px",
           height: "50px",
           borderRadius: "20px",
-          textTransform: 'capitalize',
+          textTransform: "capitalize",
           mt: -2,
         }}
       >
@@ -43,13 +37,17 @@ const EditProfile = () => {
         sx={{
           mt: 4,
           height: "250px",
-          width: "470px",
+          width: {xs:'none',sm:'470px'},
           bgcolor: "white",
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "30px",
           display: "flex",
+          flexDirection: {xs:"column",sm:"row"}
+          
+          
         }}
       >
+
         <Grid
           sx={{
             display: "flex",
@@ -58,16 +56,19 @@ const EditProfile = () => {
             // bgcolor: "blue",
             alignItems: "center",
             justifyContent: "center",
+          
+            
           }}
         >
           <Box>
             <img
-              alt={'pic here'}
+              alt={"pic here"}
               src={newestPic}
               style={{
                 height: "160px",
                 width: "160px",
                 borderRadius: "100px",
+                
               }}
             />
             <Box>
@@ -80,6 +81,7 @@ const EditProfile = () => {
             </Box>
           </Box>
         </Grid>
+        <br/>
         <Box
           style={{
             width: "235px",
@@ -89,6 +91,8 @@ const EditProfile = () => {
             alignItems: "center",
             backgroundColor: "#ADD8E6",
             flexDirection: "column",
+          
+            marginTop:'25px'
           }}
         >
           <Box
@@ -102,6 +106,8 @@ const EditProfile = () => {
               justifyContent: "space-around",
               flexDirection: "row",
               alignItems: "center",
+           
+              
             }}
           >
             <Typography m={1} fontSize={"24px"}>

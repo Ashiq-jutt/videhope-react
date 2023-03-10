@@ -44,20 +44,22 @@ const ContentReport = () => {
         Content Reported
       </Button>
       <Box
-        container
         sx={{
           my: 3,
           bgcolor: "white",
-          boxShadow: "1px 1px 5px  #000",
+          boxShadow: { xs: "none", sm: "1px 1px 5px  #000" },
           borderRadius: "30px",
           display: "flex",
           flexWrap: "wrap",
+          flexDirection: { xs: "column", sm: "row" },
+          width: { xs: "10px", sm: "600px",md:'800px',lg:"1000px" },
         }}
       >
-        {[1, 2, 3, 3, 3, 3, 3].map((item, index) => (
-          <Grid p={3.5}>
+        {[1, 2,6,7,7, 3].map((item, index) => (
+          <Grid padding={{lg:3.5,md:6,sm:6,xs:7}}>
             <Box
-              style={{
+            
+              sx={{
                 width: "14vw",
                 display: "flex",
                 height: "22vw",
@@ -66,6 +68,7 @@ const ContentReport = () => {
                 alignItems: "center",
                 boxShadow: "1px 1px 7px  #000",
                 flexDirection: "column",
+                marginBottom: { xs: "150px", sm: "0px" },
               }}
             >
               <Box
@@ -74,6 +77,7 @@ const ContentReport = () => {
                   justifyContent: "center",
                   flexDirection: "column",
                   alignItems: "center",
+                  display: "flex",
                 }}
               >
                 <Typography

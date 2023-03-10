@@ -49,9 +49,11 @@ const Accounting = () => {
             // borderBottomRightRadius: "80px",
             // pt: 2,
             py: 5,
+            width: {xs: "220px",sm:'200px'},
+            height: {xs: "220px",sm:'200px'},
           }}
         >
-          <img src={accountingImage} width="220px" height="232px" />
+          <img src={accountingImage} sx={{width:{xs: "80px",sm:'200px'}}} height="232px" />
         </Box>
 
         <Button
@@ -64,6 +66,7 @@ const Accounting = () => {
             px: 14,
             py: 1.4,
             mt: 3,
+            textTransform:'capitalize'
           }}
         >
           Subscriptions
@@ -79,6 +82,7 @@ const Accounting = () => {
             px: 12.2,
             py: 1.4,
             mt: 2,
+            textTransform:'capitalize'
           }}
         >
           Widthraw Request
@@ -93,6 +97,7 @@ const Accounting = () => {
             px: 12.2,
             py: 1.4,
             mt: 2,
+            textTransform:'capitalize'
           }}
         >
           Creator Earnings
@@ -107,6 +112,7 @@ const Accounting = () => {
             px: 11.9,
             py: 1.4,
             mt: 2,
+            textTransform:'capitalize'
           }}
         >
           Subscribed Amount
