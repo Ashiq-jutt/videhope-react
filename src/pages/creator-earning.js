@@ -18,11 +18,12 @@ const CreatorEarning = () => {
           borderRadius: "5px 5px 20px 20px",
           mt: -4,
           ml: 8,
+          textTransform: "capitalize",
         }}
       >
         Creator Earnings
       </Button>
-      <Box container sx={{ display: "flex", direction: "row" }}>
+      <Box container sx={{ display: "flex", flexDirection: { sm: "row", xs: 'column' } }}>
         <Box>
           <Box
             sx={{
@@ -135,7 +136,7 @@ const CreatorEarning = () => {
         <Box
           sx={{
             bgcolor: "white",
-            width: "42vw",
+            width: { sm: "40vw", xs: '80vw' },
             boxShadow: "1px 1px 5px  #000",
             borderRadius: "35px",
             direction: "column",
@@ -149,7 +150,7 @@ const CreatorEarning = () => {
             container
             sx={{
               px: 2,
-              width: "37vw",
+              width: { sm: "40vw", xs: '80vw' },
               boxShadow: "1px 1px 5px  #000",
               borderRadius: "0px 0px 15px 15px ",
               // display: "flex",
@@ -177,7 +178,7 @@ const CreatorEarning = () => {
               key={index}
               container
               sx={{
-                width: "37vw",
+                width: { sm: "40vw", xs: '80vw' },
                 direction: "row",
                 py: 1.6,
                 // mt: "15px",
