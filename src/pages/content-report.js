@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { reportedImg } from "../assets/images";
+import "../css/content-report.css";
 // import Masonry from "@mui/lab/Masonry";
 const ContentReport = () => {
   const [checked, setChecked] = React.useState(true);
@@ -22,54 +23,37 @@ const ContentReport = () => {
     setChecked(event.target.checked);
   };
   return (
-    <Box
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      flexDirection="column"
-    >
-      <Button
-        sx={{
-          variant: "outlined",
-          color: "black",
-          boxShadow: "1px 1px 5px  #000",
-          width: "210px",
-          height: "50px",
-          borderBottomLeftRadius: "20px",
-          borderBottomRightRadius: "20px",
-          mt: -3,
-          mr: 120,
-        }}
-      >
-        Content Reported
-      </Button>
-      <Box
-        sx={{
-          my: 3,
-          bgcolor: "white",
-          boxShadow: { xs: "none", sm: "1px 1px 5px  #000" },
-          borderRadius: "30px",
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: { xs: "column", sm: "row" },
-          width: { xs: "10px", sm: "600px",md:'800px',lg:"1000px" },
-        }}
-      >
-        {[1, 2,6,7,7, 3].map((item, index) => (
-          <Grid padding={{lg:3.5,md:6,sm:6,xs:7}}>
-            <Box
+    <>
+      <div className="col-md-12">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          style={{
+            marginTop: "-30px",
+            width: "200px",
+            height: "60px",
+            borderRadius: "10px",
+          }}
+        >
+          Content Report
+        </button>
+        <div
+          className="card d-flex"
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
             
-              sx={{
-                width: "14vw",
-                display: "flex",
-                height: "22vw",
-                justifyContent: "center",
-                borderRadius: "20px",
-                alignItems: "center",
-                boxShadow: "1px 1px 7px  #000",
-                flexDirection: "column",
-                marginBottom: { xs: "150px", sm: "0px" },
-              }}
+            gap: 15,
+            boxShadow: "1px 1px 5px  #000",
+
+            margin: "50px 50px 50px 50px",
+            padding: "15px",
+          }}
+        >
+          {[1, 2, 6, 3, 4, 6, 7, 9].map((item, index) => (
+            <div
+              className="card"
+              style={{ boxShadow: "1px 1px 5px  #000", marginTop: "10px" }}
             >
               <Box
                 sx={{
@@ -120,11 +104,11 @@ const ContentReport = () => {
                   Content Reported
                 </Button>
               </Box>
-            </Box>
-          </Grid>
-        ))}
-      </Box>
-    </Box>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
