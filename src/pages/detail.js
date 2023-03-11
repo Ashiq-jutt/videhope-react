@@ -148,21 +148,22 @@ const Detail = () => {
       </Grid>
       <Box
         sx={{
-          bgcolor: { sm: "white", xs: '' },
-          width: { sm: "65vw", xs: 'auto' },
+          // bgcolor: { sm: "white", xs: '' },
+          width: { sm: "65vw", xs: '75vw' },
           boxShadow: "1px 1px 5px  #000",
           borderRadius: "35px",
           direction: "column",
           px: 4,
           pb: "10px",
           my: 3,
+          
         }}
       >
         <Grid
           container
           sx={{
             px: { sm: '5px', xs: '8px' },
-            width: { sm: "65vw", xs: '75vw' },
+            width: { sm: "60vw", xs: '75vw' },
             boxShadow: "1px 1px 5px  #000",
             borderRadius: "0px 0px 20px 20px ",
             direction: "row",

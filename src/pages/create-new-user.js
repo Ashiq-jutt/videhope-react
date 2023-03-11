@@ -21,8 +21,10 @@ const CreateNewUser = () => {
       flexDirection="column"
       justifyContent={"center"}
       alignItems={"center"}
+    
     >
-      <Box
+      <Box className="card"
+      padding="20px"
         sx={{
           //   width: "cal(100% - 700px)",
           // boxShadow: "1px 1px 2px  #000",
