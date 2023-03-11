@@ -24,11 +24,8 @@ import CustomerLogin from "./pages/cutomer-ligin";
 import ContentReport from "./pages/content-report";
 import AccountReported from "./pages/account-reported";
 import Subscription from "./pages/subscription";
-<<<<<<< HEAD
 import { GetAll, login } from "./utils/api-calls";
-=======
 import AdminLogin from "./pages/admin-login";
->>>>>>> cf9a37bd39dba56c0cd688153946bb74e9c09790
 
 const routes = [
   {
