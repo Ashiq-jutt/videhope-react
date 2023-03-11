@@ -101,7 +101,7 @@ const AdminLogin = () => {
                         />
                     </Box>
                     <Button
-                        onClick={() => navigate("/createPanel")}
+                        onClick={() => navigate("/employPortal")}
                         sx={{
                             bgcolor: "blue",
                             color: "white",

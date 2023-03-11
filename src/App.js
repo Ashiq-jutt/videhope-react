@@ -24,6 +24,7 @@ import CustomerLogin from "./pages/cutomer-ligin";
 import ContentReport from "./pages/content-report";
 import AccountReported from "./pages/account-reported";
 import Subscription from "./pages/subscription";
+import AdminLogin from "./pages/admin-login";
 
 const routes = [
   {
@@ -93,7 +94,7 @@ function App() {
     <PersistentDrawerLeft routes={routes}>
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<EmployeePortal />} />
+        <Route path="/employPortal" element={<EmployeePortal />} />
         <Route path="/userProfile" element={<UserProfile />} />
         <Route path="/creatorPanelLogin" element={<CreatorPanelLogin />} />
         <Route path="/employeePortal" element={<EmployeePortal />} />
@@ -115,6 +116,7 @@ function App() {
         <Route path="/contentReport" element={<ContentReport />} />
         <Route path="/accountReported" element={<AccountReported />} />
         <Route path="/subscription" element={<Subscription />} />
+        <Route path="/" element={<AdminLogin />} />
       </Routes>
     </PersistentDrawerLeft>
   );
