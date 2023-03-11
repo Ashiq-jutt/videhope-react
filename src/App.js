@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 // import React from "react";
 import "./App.css";
@@ -24,6 +24,7 @@ import CustomerLogin from "./pages/cutomer-ligin";
 import ContentReport from "./pages/content-report";
 import AccountReported from "./pages/account-reported";
 import Subscription from "./pages/subscription";
+import { GetAll, login } from "./utils/api-calls";
 
 const routes = [
   {
@@ -89,6 +90,25 @@ const getRoutes = (allRoutes) =>
   });
 
 function App() {
+
+  const getD = async () => {
+    const res = await GetAll()
+    console.log(res, 'ALLLLLLL>......');
+  }
+
+  useEffect(() => {
+    // Login();
+    getD();
+  }, [])
+  const Login = async () => {
+    const res = await login({
+      email: "Hervinmb@kankira.com",
+      password: "Zikk@1234"
+    })
+    console.log(res, '...........');
+  }
+
+  // console.log(res, 'resllll');
   return (
     <PersistentDrawerLeft routes={routes}>
       <Routes>
@@ -117,6 +137,7 @@ function App() {
         <Route path="/subscription" element={<Subscription />} />
       </Routes>
     </PersistentDrawerLeft>
+
   );
 }
 
